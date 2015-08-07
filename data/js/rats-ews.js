@@ -1,0 +1,55 @@
+//Add Style
+    var head = document.getElementsByTagName('head')[0];
+    var link2 = document.createElement('link');
+        link2.setAttribute('rel', 'stylesheet');
+        link2.setAttribute('type', 'text/css');
+        link2.setAttribute('href', 'resource://RatsTracker-at-tenneco-dot-com/data/css/style.css');
+    head.appendChild(link2);
+
+//Create "add" button
+    var div = document.createElement('div');    
+    div.setAttribute('id', 'container');
+        
+    var div_add = document.createElement('div');
+        div_add.setAttribute('class', 'floating_add hover-shadow');
+        div_add.setAttribute('id', 'add');
+        div_add.setAttribute('title', 'Add to RATS');
+    div.appendChild(div_add);
+
+    
+//Create hours input
+    //var div2 = document.createElement('div'); 
+    //div2.setAttribute('id', 'container2');
+    var hours = document.createElement('input'); 
+    hours.setAttribute('id', 'hours');
+    hours.setAttribute('class', 'hours');
+    hours.setAttribute('type', 'number');
+    hours.setAttribute('value', '0.5');
+    
+    div.appendChild(hours);
+    //document.body.appendChild(div2);
+    document.body.appendChild(div);
+    
+    var URLlocation = window.location.href;
+    var numLen = URLlocation.length-5;
+    var EWS = URLlocation.substr(numLen);
+       
+    //Add button action
+    var add = document.getElementById("add");
+    add.addEventListener("click", function() {
+        var hours = document.getElementById("hours").value;
+        self.port.emit("add", EWS, hours);
+    }, false);
+    
+    
+    //Hour input
+    div.addEventListener("mouseover", function() {
+         document.getElementById('hours').style.display = 'inline';
+         document.getElementById("hours").focus();
+         document.getElementById("hours").select();
+    }, false);
+    
+    div.addEventListener("mouseout", function() {
+         document.getElementById('hours').style.display = 'none';
+         document.getElementById("hours").blur();
+    }, false);

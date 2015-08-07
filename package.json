@@ -1,0 +1,14 @@
+{
+  "title": "RATS Tracker",
+  "id": "RatsTracker@tenneco.com",
+  "name": "rats-tracker",
+  "version": "0.0.1",
+  "description": "RATS log assistant",
+  "main": "index.js",
+  "author": "Paul Heil",
+  "engines": {
+    "firefox": ">=39.0",
+    "fennec": ">=39.0"
+  },
+  "license": "MIT"
+}
