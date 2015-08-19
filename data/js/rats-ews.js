@@ -16,18 +16,13 @@
         div_add.setAttribute('title', 'Add to RATS');
     div.appendChild(div_add);
 
-    
 //Create hours input
-    //var div2 = document.createElement('div'); 
-    //div2.setAttribute('id', 'container2');
     var hours = document.createElement('input'); 
     hours.setAttribute('id', 'hours');
     hours.setAttribute('class', 'hours');
     hours.setAttribute('type', 'number');
-    hours.setAttribute('value', '0.5');
     
     div.appendChild(hours);
-    //document.body.appendChild(div2);
     document.body.appendChild(div);
     
     var URLlocation = window.location.href;
@@ -39,8 +34,7 @@
     add.addEventListener("click", function() {
         var hours = document.getElementById("hours").value;
         self.port.emit("add", EWS, hours);
-    }, false);
-    
+    }, false);  
     
     //Hour input
     div.addEventListener("mouseover", function() {
@@ -53,3 +47,9 @@
          document.getElementById('hours').style.display = 'none';
          document.getElementById("hours").blur();
     }, false);
+    
+    self.port.emit("defhour");
+    self.port.on("rtnhour", function(hour) {  
+        var hourInp = document.getElementById("hours");
+        hourInp.setAttribute('value', hour);
+    });

@@ -19,7 +19,6 @@
     word-break: normal;
     border-color: #bbb;
     color: #594F4F;
-    background-color: #E0FFEB;
 }
 .tg th {
     font-family: Arial, sans-serif;
@@ -33,12 +32,6 @@
     border-color: #bbb;
     color: #493F3F;
     background-color: #9DE0AD;
-}
-.tg .tg-hy62 {
-    background-color: #c0c0c0
-}
-.tg .tg-ugh9 {
-    background-color: #C2FFD6
 }
 th.tg-sort-header::-moz-selection {
     background: transparent;

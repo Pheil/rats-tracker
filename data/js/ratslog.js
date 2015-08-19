@@ -153,6 +153,18 @@ function closeInput(elm) {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
         sendAsyncMessage("updateHour", updateArray);
+    } else if (td.id == "R") {
+        var id = td.parentNode.id;
+        var updateArray = new Array(id, value);
+        sendAsyncMessage("updateRats", updateArray);
+    } else if (td.id == "J") {
+        var id = td.parentNode.id;
+        var updateArray = new Array(id, value);
+        sendAsyncMessage("updateJob", updateArray);
+    } else if (td.id == "W") {
+        var id = td.parentNode.id;
+        var updateArray = new Array(id, value);
+        sendAsyncMessage("updateWeek", updateArray);
     }
     
 }
@@ -178,53 +190,69 @@ addMessageListener("addRow", function(result) {
     var stringArray = result.data;
     var row = stringArray[0];
     var id = stringArray[1];
-    var job = stringArray[2];
-    var week = stringArray[3];
-    var desc = stringArray[4];
-    var hours = stringArray[5];
+    var rats = stringArray[2];
+    var job = stringArray[3];
+    var week = stringArray[4];
+    var desc = stringArray[5];
+    var hours = stringArray[6];
     var table = document.getElementById('rats-log');
+    
+    function isEven(n) 
+    {
+       return n % 2 == 0;
+    }
+    function isOdd(n)
+    {
+       return Math.abs(n) % 2 == 1;
+    }
+    var theDate = new Date(id);
+    if (isEven(Number(week))) {
+        var a = Number(week)+100;
+        var b = Number(week)+100;
+        var c = theDate.getMonth()*.05;
+    }
+    if (isOdd(Number(week))) {
+        var a = Number(week)+200;
+        var b = Number(week)+200;
+        var c = theDate.getMonth()*.1;
+    }
         
     var newRow   = table.insertRow(row+1);
-    newRow.setAttribute("class", "tg-ugh9");
+    //newRow.setAttribute("class", "tg-ugh9");
+    newRow.setAttribute("style", "background-color:rgba(" + a + ",150," + b + "," + c + ");");
     newRow.setAttribute("id", id);
     var newCell_1  = newRow.insertCell(0);
     var newText_1  = document.createTextNode(id);
     newCell_1.appendChild(newText_1);
     
     var newCell_2  = newRow.insertCell(1);
-    var newText_2  = document.createTextNode(job);
+    newCell_2.setAttribute("id", "R");
+    newCell_2.setAttribute("ondblclick", "addInput(this);");
+    var newText_2  = document.createTextNode(rats);
     newCell_2.appendChild(newText_2);
     
     var newCell_3  = newRow.insertCell(2);
-    var newText_3  = document.createTextNode(week);
+    newCell_3.setAttribute("id", "J");
+    newCell_3.setAttribute("ondblclick", "addInput(this);");
+    var newText_3  = document.createTextNode(job);
     newCell_3.appendChild(newText_3);
     
     var newCell_4  = newRow.insertCell(3);
-    newCell_4.setAttribute("id", "D");
+    newCell_4.setAttribute("id", "W");
     newCell_4.setAttribute("ondblclick", "addInput(this);");
-    var newText_4  = document.createTextNode(desc);
+    var newText_4  = document.createTextNode(week);
     newCell_4.appendChild(newText_4);
     
     var newCell_5  = newRow.insertCell(4);
-    newCell_5.setAttribute("id", "H");
+    newCell_5.setAttribute("id", "D");
     newCell_5.setAttribute("ondblclick", "addInput(this);");
-    var newText_5  = document.createTextNode(hours);
+    var newText_5  = document.createTextNode(desc);
     newCell_5.appendChild(newText_5);
-
     
-    // var searcharray = array.data;
-    // var PN_saved_a = searcharray[1];
-    // var PN_saved_b = searcharray[0];
-
-    // document.title = PN_saved_a + ' & ' + PN_saved_b;
-
-    // // Get folders
-    // PN_saved_a = folder_check(PN_saved_a);
-    // PN_saved_b = folder_check(PN_saved_b);
-
-    // document.getElementById("LHdwg").setAttribute("data", PN_saved_a);
-    // document.getElementById("RHdwg").setAttribute("data", PN_saved_b);
-    // document.getElementById("LHdwg").QueryInterface(Components.interfaces.nsIObjectLoadingContent).playPlugin();   // Forge enable plugin
-    // document.getElementById("RHdwg").QueryInterface(Components.interfaces.nsIObjectLoadingContent).playPlugin();   // Forge enable plugin
+    var newCell_6  = newRow.insertCell(5);
+    newCell_6.setAttribute("id", "H");
+    newCell_6.setAttribute("ondblclick", "addInput(this);");
+    var newText_6  = document.createTextNode(hours);
+    newCell_6.appendChild(newText_6);
     
 });
