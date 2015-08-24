@@ -1,16 +1,20 @@
 self.port.on("show", function onShow() {    
-    $('#job').focus();
-    $('#job').select();
+    $('#ews').focus();
+    $('#ews').select();
 });
 
 var add = document.getElementById("add");
 add.addEventListener("click", function() {
-    var job = document.getElementById("job").value;
+    var ews = document.getElementById("ews").value;
     var rats = document.getElementById("rats").value;
     var desc = document.getElementById("desc").value;
     var hours = document.getElementById("hours").value;
-    
-    self.port.emit('man_add', job, rats, desc, hours);
+    if (isNaN(hours) || hours <=0) {
+        var hours = 0;
+        self.port.emit('man_add', ews, rats, desc, hours);
+    } else {
+        self.port.emit('man_add', ews, rats, desc, hours);
+    }
 }, false);
 
 var rats = new Bloodhound({

@@ -8,6 +8,7 @@ const { ToggleButton } = require("sdk/ui/button/toggle");
 const pageMod = require("sdk/page-mod");
 const tabs = require("sdk/tabs");
 const panels = require("sdk/panel");
+const sidebars = require("sdk/ui/sidebar");
 const {Cc,Ci,Cm,Cu,components} = require("chrome");
 var chrome = require('chrome');
 var prompts = chrome.Cc["@mozilla.org/embedcomp/prompt-service;1"].getService(chrome.Ci.nsIPromptService);
@@ -62,6 +63,65 @@ var man_add_panel = panels.Panel({
     contentScriptFile: ["./js/jquery-1.10.2.js",
                       "./js/typeahead.bundle.js",
                       "./js/addpanel.js"] 
+});
+
+
+var rats_entry_sidebar = sidebars.Sidebar({
+  id: 'quick-rats',
+  title: 'Rats Entry Mode',
+  url: "./rats_entry_sidebar.html",
+  onAttach: function (worker) {
+        worker.port.on("copy", function(value) {
+            var clipboard = require("sdk/clipboard");
+            clipboard.set(value);            
+        });
+        
+        worker.port.on("loaded", function() {
+            //Default is -4w to today
+            var theDate = new Date();
+            var endDate = theDate.toJSON()
+            var startDate = new Date(theDate.getDate() - 28).toJSON();
+console.log("startDate: " + startDate);//WRONG !!!
+            //Retrieve all docs with same week and year
+            var db = new PouchDB('RATS');
+            var options = {startkey : startDate, endkey : endDate, include_docs : true};
+            db.allDocs(options, function (err, response) {
+                if (response && response.rows.length > 0) {
+                  //Separate into variables
+                    for (var i=0;i<response.rows.length;i++) {
+                        var rat_data = JSON.stringify(response.rows[i].doc)
+                        var rat_data_parsed = JSON.parse(rat_data);
+                        var num = i;
+                        var newText_2  = rat_data_parsed.rats;
+                        var newText_3  = rat_data_parsed.ews;
+                        var newText_4  = rat_data_parsed.week;
+                        var newText_5  = rat_data_parsed.desc;
+                        var newText_6  = rat_data_parsed.hours;
+                        
+                        var array = new Array(num, newText_2, newText_3, newText_4, newText_5, newText_6);
+                        worker.port.emit("update", array);
+                    }
+                }
+            });
+           
+        });
+        
+        worker.port.on("chgTableData", function(from, to) {
+            console.log("From: " + from);
+            console.log("To: " + to);
+            var array = "temp";
+            worker.port.emit("update", array);
+        });
+  },
+  onShow: function () {
+    //console.log("showing");
+  },
+  onHide: function () {
+    //console.log("hiding");
+  },
+  onDetach: function () {
+    //console.log("detaching");
+  }
 });
 
 man_add_panel.on("show", function() {
@@ -135,6 +195,23 @@ function updateBadge() {
     });
 }
 
+// var quickRats = ActionButton({
+    // id: "quick-rats-button",
+    // label: "Quick Rats",
+    // icon: {
+      // "16": "./images/cheese-16.png",
+      // "32": "./images/cheese-32.png"
+    // },
+    // onClick: function(state) {
+        // rats_entry_panel.destroy();
+        // quickRats.destroy();
+    // }
+  // });
+
+// rats_entry_panel.show({
+  // position: quickRats
+// });
+
 rat_panel.port.on("click_link", function (text) {
     if (text == "vLog") {
         tabs.open({
@@ -151,66 +228,54 @@ rat_panel.port.on("click_link", function (text) {
         //Reload ratslog page if open?
     }
     else if (text == "rENT") {
-        var theDate = new Date();
-        var week = getWeekNumber(theDate);
-        var check = {value: false};                  // default checkbox to false
-        var input = {value: week};                  // default edit field
-        week = prompts.prompt(null, 'Week Number?', 'Please enter the week number to retrieve', input, null, check);
-        //input.value holds the value of the edit field if "OK" was pressed.
-        if (week) {
-            var db = new PouchDB('RATS');
-            var options = {startkey : startDate, endkey : theDate2, include_docs : true};
-            db.allDocs(options, function (err, response) {
-                if (response && response.rows.length > 0) {
-                  //Separate into variables
-                    var num = 0;
-                    for (var i=0;i<response.rows.length;i++) {
-                        var rat_data = JSON.stringify(response.rows[i].doc)
-                        var rat_data_parsed = JSON.parse(rat_data);
-                        num = i;
-                        var project  = rat_data_parsed.rats;
-                        var job      = rat_data_parsed.job;
-                        var task     = rat_data_parsed.desc;
-                        var hours    = rat_data_parsed.hours;
+        rats_entry_sidebar.show();
+        //If already open need to refresh view - how?
+        
+        
+        // var theDate = new Date();
+        // var week = getWeekNumber(theDate);
+        // var check = {value: false};                  // default checkbox to false
+        // var input = {value: week};                  // default edit field
+        // week = prompts.prompt(null, 'Week Number?', 'Please enter the week number to retrieve', input, null, check);
+        // //input.value holds the value of the edit field if "OK" was pressed.
+        // if (week) {
+            // var db = new PouchDB('RATS');
+            // var options = {startkey : startDate, endkey : theDate2, include_docs : true};
+            // db.allDocs(options, function (err, response) {
+                // if (response && response.rows.length > 0) {
+                  // //Separate into variables
+                    // var num = 0;
+                    // for (var i=0;i<response.rows.length;i++) {
+                        // var rat_data = JSON.stringify(response.rows[i].doc)
+                        // var rat_data_parsed = JSON.parse(rat_data);
+                        // num = i;
+                        // var project  = rat_data_parsed.rats;
+                        // var ews      = rat_data_parsed.ews;
+                        // var task     = rat_data_parsed.desc;
+                        // var hours    = rat_data_parsed.hours;
                         
-                        var num = new Array(project, job, task, hours);
-                    }
-                }
-//Try creating an array of the IDs then loop through that array pulling only each value when needed?
-            });
+                        // var num = new Array(project, ews, task, hours);
+                    // }
+                // }
+        // //Try creating an array of the IDs then loop through that array pulling only each value when needed?
+            // });
                 
-            //Copy first item to clipboard
+            // //Copy first item to clipboard
             
-            notifications.notify({
-                title: "RATS Tracker",
-                text: "First RATS # copied to clipboard, ready to paste",
-                iconURL: ratIcon
-            });
+            // notifications.notify({
+                // title: "RATS Tracker",
+                // text: "First RATS # copied to clipboard, ready to paste",
+                // iconURL: ratIcon
+            // });
             
-            var quickRats = ActionButton({
-                id: "quick-rats-button",
-                label: "Quick Rats",
-                icon: {
-                  "16": "./images/cheese-16.png",
-                  "32": "./images/cheese-32.png"
-                },
-                onClick: function(state) {
-                    //Copy next value to clipboard
-                    
-                    
-                    //console.log("button '" + state.label + "' was clicked");
-                    
-                    //Copy last value, prompt and close button
-                    //quickRats.destroy();
-                }
-              });
-        } else {
-            notifications.notify({
-                title: "RATS Tracker",
-                text: "RATS entry mode cancelled!",
-                iconURL: ratIcon
-            });
-        }
+
+        // } else {
+            // notifications.notify({
+                // title: "RATS Tracker",
+                // text: "RATS entry mode cancelled!",
+                // iconURL: ratIcon
+            // });
+        // }
         
     }
     else if (text == "exp") {
@@ -222,28 +287,46 @@ rat_panel.port.on("click_link", function (text) {
     handleHide();
 });
 
-man_add_panel.port.on("man_add", function (job, rats, desc, hours) {
-    var theDate = new Date();
-    var db = new PouchDB('RATS');
-    var doc = {
-      "_id": new Date().toJSON(),
-      "rats": rats,
-      "job": job,
-      "week": getWeekNumber(theDate),
-      "desc": desc, 
-      "hours": hours
-    };
-    db.put(doc);
+man_add_panel.port.on("man_add", function (ews, rats, desc, hours) {
+    if (ews == "") {
+        ews = "N/A";
+    }
+    
+    if (hours === 0) {
+        notifications.notify({
+            title: "RATS Tracker",
+            text: "Invalid hours, must be a number and greater than 0.",
+            iconURL: ratIcon
+        });
+    } else {
+        var theDate = new Date();
+        var db = new PouchDB('RATS');
+        var doc = {
+          "_id": new Date().toJSON(),
+          "rats": rats,
+          "ews": ews,
+          "week": getWeekNumber(theDate),
+          "desc": desc, 
+          "hours": hours
+        };
+        db.put(doc);
 
-    handleHide2();
-    
-    notifications.notify({
-        title: "RATS Tracker",
-        text: "Job " + job + " [" + hours + " hours] added to RATS log.",
-        iconURL: ratIcon
-    });
-    
-    updateBadge();
+        handleHide2();
+        if (ews == "N/A") {
+            notifications.notify({
+                title: "RATS Tracker",
+                text: "Job " + desc + " [" + hours + " hours] added to RATS log.",
+                iconURL: ratIcon
+            });
+        } else {
+            notifications.notify({
+                title: "RATS Tracker",
+                text: "Job EWS" + ews + " [" + hours + " hours] added to RATS log.",
+                iconURL: ratIcon
+            });
+        }
+        updateBadge();
+        }
 });
 
 pageMod.PageMod({
@@ -264,7 +347,7 @@ pageMod.PageMod({
             var doc = {
               "_id": new Date().toJSON(),
               "rats": "",
-              "job": "EWS" + EWS,
+              "ews": EWS,
               "week": getWeekNumber(theDate),
               "desc": "", 
               "hours": hours
@@ -303,7 +386,7 @@ RATsLog.addMessageListener("ready", function() {
             var num = i;
             var newText_1  = rat_data_parsed._id;
             var newText_2  = rat_data_parsed.rats;
-            var newText_3  = rat_data_parsed.job;
+            var newText_3  = rat_data_parsed.ews;
             var newText_4  = rat_data_parsed.week;
             var newText_5  = rat_data_parsed.desc;
             var newText_6  = rat_data_parsed.hours;
@@ -357,21 +440,21 @@ RATsLog.addMessageListener("updateRats", function(array) {
     });
 });
 
-RATsLog.addMessageListener("updateJob", function(array) {
-    var jobArray = array.data;
-    var id = jobArray[0];
-    var job = jobArray[1];
+RATsLog.addMessageListener("updateEWS", function(array) {
+    var ewsArray = array.data;
+    var id = ewsArray[0];
+    var ews = ewsArray[1];
       
     db.get(id).then(function (doc) {
-      doc.job = job;
+      doc.ews = ews;
       return db.put(doc);
     });
 });
 
 RATsLog.addMessageListener("updateWeek", function(array) {
-    var jobArray = array.data;
-    var id = jobArray[0];
-    var week = jobArray[1];
+    var weekArray = array.data;
+    var id = weekArray[0];
+    var week = weekArray[1];
       
     db.get(id).then(function (doc) {
       doc.week = week;

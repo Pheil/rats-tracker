@@ -157,10 +157,10 @@ function closeInput(elm) {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
         sendAsyncMessage("updateRats", updateArray);
-    } else if (td.id == "J") {
+    } else if (td.id == "E") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
-        sendAsyncMessage("updateJob", updateArray);
+        sendAsyncMessage("updateEWS", updateArray);
     } else if (td.id == "W") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
@@ -191,7 +191,7 @@ addMessageListener("addRow", function(result) {
     var row = stringArray[0];
     var id = stringArray[1];
     var rats = stringArray[2];
-    var job = stringArray[3];
+    var ews = stringArray[3];
     var week = stringArray[4];
     var desc = stringArray[5];
     var hours = stringArray[6];
@@ -232,9 +232,9 @@ addMessageListener("addRow", function(result) {
     newCell_2.appendChild(newText_2);
     
     var newCell_3  = newRow.insertCell(2);
-    newCell_3.setAttribute("id", "J");
+    newCell_3.setAttribute("id", "E");
     newCell_3.setAttribute("ondblclick", "addInput(this);");
-    var newText_3  = document.createTextNode(job);
+    var newText_3  = document.createTextNode(ews);
     newCell_3.appendChild(newText_3);
     
     var newCell_4  = newRow.insertCell(3);
