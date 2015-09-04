@@ -139,11 +139,11 @@ document.addEventListener("DOMContentLoaded", function(n) {
     TgTableSort("rats-log")
 });
 
-function closeInput(elm) {
-    var td = elm.parentNode;
-    var value = elm.value;
-    td.removeChild(elm);
-    td.innerHTML = value;
+function closeInput() {
+    var td = this.parentNode;
+    var value = this.value;
+    td.removeChild(this);
+    td.textContent = value;
     //Save data to DB
     if (td.id == "D") {
         var id = td.parentNode.id;
@@ -169,19 +169,23 @@ function closeInput(elm) {
     
 }
 
-function addInput(elm) {
-    if (elm.getElementsByTagName('input').length > 0) return;
+function addInput() {
+    if (this.getElementsByTagName('input').length > 0) return;
 
-    var value = elm.innerHTML;
-    elm.innerHTML = '';
+    var value = this.innerHTML;
+    this.innerHTML = '';
 
     var input = document.createElement('input');
     input.setAttribute('type', 'text');
     input.setAttribute('class', 'update');
     input.setAttribute('value', value);
-    input.setAttribute('onBlur', 'closeInput(this)');
-    elm.appendChild(input);
+    this.appendChild(input);
     input.focus();
+    
+    var input = document.querySelectorAll("input[type=text]");
+    Array.prototype.forEach.call(input, function(input) {
+      input.addEventListener('blur', closeInput);
+    }); 
 }
 
 sendAsyncMessage("ready");
@@ -227,32 +231,43 @@ addMessageListener("addRow", function(result) {
     
     var newCell_2  = newRow.insertCell(1);
     newCell_2.setAttribute("id", "R");
-    newCell_2.setAttribute("ondblclick", "addInput(this);");
     var newText_2  = document.createTextNode(rats);
     newCell_2.appendChild(newText_2);
     
     var newCell_3  = newRow.insertCell(2);
     newCell_3.setAttribute("id", "E");
-    newCell_3.setAttribute("ondblclick", "addInput(this);");
     var newText_3  = document.createTextNode(ews);
     newCell_3.appendChild(newText_3);
     
     var newCell_4  = newRow.insertCell(3);
     newCell_4.setAttribute("id", "W");
-    newCell_4.setAttribute("ondblclick", "addInput(this);");
     var newText_4  = document.createTextNode(week);
     newCell_4.appendChild(newText_4);
     
     var newCell_5  = newRow.insertCell(4);
     newCell_5.setAttribute("id", "D");
-    newCell_5.setAttribute("ondblclick", "addInput(this);");
     var newText_5  = document.createTextNode(desc);
     newCell_5.appendChild(newText_5);
     
     var newCell_6  = newRow.insertCell(5);
     newCell_6.setAttribute("id", "H");
-    newCell_6.setAttribute("ondblclick", "addInput(this);");
     var newText_6  = document.createTextNode(hours);
     newCell_6.appendChild(newText_6);
     
+    
+    
+    // using a CSS Selector, with document.querySelectorAll()
+    // to get a NodeList of <td> elements within the #tableID element:
+    var cells = document.querySelectorAll('#rats-log td');
+
+    // iterating over the array-like NodeList, using
+    // Array.prototype.forEach() and Function.prototype.call():
+    Array.prototype.forEach.call(cells, function(td) {
+      // the first argument of the anonymous function (here: 'td')
+      // is the element of the array over which we're iterating.
+
+      // adding an event-handler (the function logText) to handle
+      // the click events on the <td> elements:
+      td.addEventListener('dblclick', addInput);
+    }); 
 });

@@ -11,7 +11,7 @@
     div.setAttribute('id', 'container');
         
     var div_add = document.createElement('div');
-        div_add.setAttribute('class', 'floating_add hover-shadow');
+        div_add.setAttribute('class', 'floating_add hover-shadow no-print');
         div_add.setAttribute('id', 'add');
         div_add.setAttribute('title', 'Add to RATS');
     div.appendChild(div_add);

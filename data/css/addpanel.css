@@ -140,30 +140,30 @@ input[type="button"]::-moz-focus-inner,
     width: 24px;
 }
 label {
-  font-weight: bold;
-  display: inline;
-  margin-bottom: 0px;
-  margin-left: 0px;
+    font-weight: bold;
+    display: inline;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 input[type="text"] {
-  font-size: 12px;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline;
-  width: 97%;
-  border: 1px solid #cac9c9;
-  margin-bottom: 2px;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    width: 97%;
+    border: 1px solid #cac9c9;
+    margin-bottom: 2px;
 }
 input[type="number"] {
-  font-size: 12px;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline;
-  -moz-appearance:textfield;
-  width: 97%;
-  border: 1px solid #cac9c9;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    -moz-appearance:textfield;
+    width: 97%;
+    border: 1px solid #cac9c9;
 }
 
 input:focus {
-  border: 1px solid #000;
+    border: 1px solid #000;
 }
