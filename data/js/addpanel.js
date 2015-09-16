@@ -3,19 +3,32 @@ self.port.on("show", function onShow() {
     $('#ews').select();
 });
 
+var hours = document.getElementById("hours");
+hours.addEventListener("keydown", keyDownTextField, false);
+function keyDownTextField (e) {
+    if (e.keyCode === 13) {
+        addData();
+        return e.returnValue = false;
+    }
+}
+
 var add = document.getElementById("add");
-add.addEventListener("click", function() {
+add.addEventListener("click", addData, false);
+
+function addData () {
     var ews = document.getElementById("ews").value;
     var rats = document.getElementById("rats").value;
     var desc = document.getElementById("desc").value;
     var hours = document.getElementById("hours").value;
     if (isNaN(hours) || hours <=0) {
-        var hours = 0;
+        hours = 0;
         self.port.emit('man_add', ews, rats, desc, hours);
     } else {
         self.port.emit('man_add', ews, rats, desc, hours);
     }
-}, false);
+}
+
+
 
 var rats = new Bloodhound({
   //datumTokenizer: Bloodhound.tokenizers.obj.whitespace('ratn'),

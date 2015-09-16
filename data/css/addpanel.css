@@ -49,21 +49,20 @@ body {
 }
 
 .tt-menu {
-  max-height: 180px;
-  overflow-y: auto;
-  width: 210px;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    max-height: 135px;
+    overflow-y: auto;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .tt-suggestion {
   padding: 0px 0px;
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 100%;
 }
 

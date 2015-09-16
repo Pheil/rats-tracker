@@ -6,12 +6,12 @@ var TgTableSort = window.TgTableSort || function(n, t) {
             var u = o[i];
             if ("." == t.substring(0, 1)) {
                 var a = t.substring(1);
-                f(u, a) && e.push(u)
+                f(u, a) && e.push(u);
             } else u.nodeName.toLowerCase() == t && e.push(u);
             var c = r(u, t);
             e = e.concat(c)
         }
-        return e
+        return e;
     }
 
     function e(n, t) {
@@ -24,50 +24,50 @@ var TgTableSort = window.TgTableSort || function(n, t) {
     }
 
     function o(n) {
-        return n.textContent || n.innerText || ""
+        return n.textContent || n.innerText || "";
     }
 
     function i(n) {
-        return n.innerHTML || ""
+        return n.innerHTML || "";
     }
 
     function u(n, t) {
         var r = e(n, t);
-        return r.map(o)
+        return r.map(o);
     }
 
     function a(n, t) {
         var r = e(n, t);
-        return r.map(i)
+        return r.map(i);
     }
 
     function c(n) {
         var t = n.className || "";
-        return t.match(/\S+/g) || []
+        return t.match(/\S+/g) || [];
     }
 
     function f(n, t) {
-        return -1 != c(n).indexOf(t)
+        return -1 != c(n).indexOf(t);
     }
 
     function s(n, t) {
-        f(n, t) || (n.className += " " + t)
+        f(n, t) || (n.className += " " + t);
     }
 
     function d(n, t) {
         if (f(n, t)) {
             var r = c(n),
                 e = r.indexOf(t);
-            r.splice(e, 1), n.className = r.join(" ")
+            r.splice(e, 1), n.className = r.join(" ");
         }
     }
 
     function v(n) {
-        d(n, L), d(n, E)
+        d(n, L), d(n, E);
     }
 
     function l(n, t, e) {
-        r(n, "." + E).map(v), r(n, "." + L).map(v), e == T ? s(t, E) : s(t, L)
+        r(n, "." + E).map(v), r(n, "." + L).map(v), e == T ? s(t, E) : s(t, L);
     }
 
     function g(n) {
@@ -81,7 +81,7 @@ var TgTableSort = window.TgTableSort || function(n, t) {
         return function(t, r) {
             var e = +t.str,
                 o = +r.str;
-            return e == o ? t.index - r.index : n * (e - o)
+            return e == o ? t.index - r.index : n * (e - o);
         }
     }
 
@@ -91,12 +91,12 @@ var TgTableSort = window.TgTableSort || function(n, t) {
                 return {
                     str: n,
                     index: t
-                }
+                };
             }),
             i = e && -1 == e.map(isNaN).indexOf(!0),
             a = i ? h(r) : g(r);
         return o.sort(a), o.map(function(n) {
-            return n.index
+            return n.index;
         })
     }
 
@@ -105,18 +105,18 @@ var TgTableSort = window.TgTableSort || function(n, t) {
             var s = e(n, c),
                 d = a(n, c);
             s.forEach(function(n, t) {
-                n.innerHTML = d[u[t]]
+                n.innerHTML = d[u[t]];
             })
         }
-        l(n, o, i)
+        l(n, o, i);
     }
 
     function x(n, t) {
         var r = t.length;
         t.forEach(function(t, e) {
             t.addEventListener("click", function() {
-                p(n, r, e, t)
-            }), s(t, "tg-sort-header")
+                p(n, r, e, t);
+            }), s(t, "tg-sort-header");
         })
     }
     var T = 1,
@@ -130,13 +130,13 @@ var TgTableSort = window.TgTableSort || function(n, t) {
         0 == i.length && (i = r(o[0], "th"));
         for (var u = 1; u < o.length; ++u) {
             var a = r(o[u], "td");
-            if (a.length != i.length) return
+            if (a.length != i.length) return;
         }
-        x(e, i)
+        x(e, i);
     }
 }(document);
 document.addEventListener("DOMContentLoaded", function(n) {
-    TgTableSort("rats-log")
+    TgTableSort("rats-log");
 });
 
 function closeInput() {
@@ -182,7 +182,7 @@ function addInput() {
     this.appendChild(input);
     input.focus();
     
-    var input = document.querySelectorAll("input[type=text]");
+    input = document.querySelectorAll("input[type=text]");
     Array.prototype.forEach.call(input, function(input) {
       input.addEventListener('blur', closeInput);
     }); 
@@ -213,17 +213,17 @@ addMessageListener("addRow", function(result) {
     if (isEven(Number(week))) {
         var a = Number(week)+100;
         var b = Number(week)+100;
-        var c = theDate.getMonth()*.05;
+        var c = theDate.getMonth()*0.05;
     }
     if (isOdd(Number(week))) {
         var a = Number(week)+200;
         var b = Number(week)+200;
-        var c = theDate.getMonth()*.1;
+        var c = theDate.getMonth()*0.1;
     }
         
     var newRow   = table.insertRow(row+1);
     //newRow.setAttribute("class", "tg-ugh9");
-    newRow.setAttribute("style", "background-color:rgba(" + a + ",150," + b + "," + c + ");");
+    newRow.setAttribute("style", "background-color:rgba(" + a + ",240," + b + "," + c + ");");
     newRow.setAttribute("id", id);
     var newCell_1  = newRow.insertCell(0);
     var newText_1  = document.createTextNode(id);

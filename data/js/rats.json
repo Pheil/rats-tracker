@@ -9,7 +9,7 @@
     },
     {
         "ratn": "03",
-        "desc": "Sick Time or Personal Time"
+        "desc": "Sick Time - Personal Time"
     },
     {
         "ratn": "04",
@@ -33,11 +33,11 @@
     },
     {
         "ratn": "09",
-        "desc": "Department Meetings"
+        "desc": "Meetings - Dept"
     },
     {
         "ratn": "10",
-        "desc": "Company Meetings - All Employee Mtgs"
+        "desc": "Meetings - All Employee"
     },
     {
         "ratn": "11",
@@ -49,7 +49,7 @@
     },
     {
         "ratn": "13",
-        "desc": "Department Processes"
+        "desc": "Dept Processes"
     },
     {
         "ratn": "14",
@@ -65,27 +65,27 @@
     },
     {
         "ratn": "17",
-        "desc": "SUPPORT - Ride Control Plants"
+        "desc": "SUPPORT - RC Plants"
     },
     {
         "ratn": "18",
-        "desc": "SUPPORT - Exhaust Plants"
+        "desc": "SUPPORT - EC Plants"
     },
     {
         "ratn": "19",
-        "desc": "SUPPORT - Elastomer Plants"
+        "desc": "SUPPORT - EL Plants"
     },
     {
         "ratn": "20",
-        "desc": "Service Engineering Ride Control"
+        "desc": "Service Engineering RC"
     },
     {
         "ratn": "21",
-        "desc": "Service Engineering Exhaust"
+        "desc": "Service Engineering EC"
     },
     {
         "ratn": "22",
-        "desc": "Service Engineering Elastomer"
+        "desc": "Service Engineering EL"
     },
     {
         "ratn": "23",
@@ -97,11 +97,11 @@
     },
     {
         "ratn": "25",
-        "desc": "Engineering Systems Maintenance"
+        "desc": "Eng Systems Maintenance"
     },
     {
         "ratn": "26",
-        "desc": "Eng Systems New Applications business"
+        "desc": "Eng Systems New App business"
     },
     {
         "ratn": "27",
@@ -109,7 +109,7 @@
     },
     {
         "ratn": "28",
-        "desc": "SUPPORT - Current Production Activities - ECO DEVIATIONS"
+        "desc": "Current Prod Activities - ECO DEVIATIONS"
     },
     {
         "ratn": "29",
@@ -117,31 +117,31 @@
     },
     {
         "ratn": "30",
-        "desc": "Prototype Shop Quality Assurance Activities"
+        "desc": "Proto. Shop Quality Assurance"
     },
     {
         "ratn": "31",
-        "desc": "Prototype Shop Shipping Handling Activities"
+        "desc": "Proto. Shop Shipping H+ling"
     },
     {
         "ratn": "32",
-        "desc": "Prototype Shop General Maintenance Functions"
+        "desc": "Proto. Shop Gen Maintenance"
     },
     {
         "ratn": "33",
-        "desc": "Prototype Shop Machine Maintenance Functions"
+        "desc": "Proto. Shop Machine Maintenance Functions"
     },
     {
         "ratn": "34",
-        "desc": "Prototype Shop Union Activities"
+        "desc": "Proto. Shop Union"
     },
     {
         "ratn": "35",
-        "desc": "Prototype Shop Rework Activities"
+        "desc": "Proto. Shop Rework"
     },
     {
         "ratn": "36",
-        "desc": "Product Test Calibration Correlation + Repair"
+        "desc": "Product Test Calibration Correlation/Repair"
     },
     {
         "ratn": "37",
@@ -173,7 +173,7 @@
     },
     {
         "ratn": "46",
-        "desc": "Prototype Shop Equipment Build or Rebuild"
+        "desc": "Proto. Shop Equipment Build or Rebuild"
     },
     {
         "ratn": "47",
@@ -189,55 +189,55 @@
     },
     {
         "ratn": "51",
-        "desc": "HEALTH AND SAFETY"
+        "desc": "HEALTH + SAFETY"
     },
     {
         "ratn": "54",
-        "desc": "Total Value Management"
+        "desc": "Total Value MGMT"
     },
     {
         "ratn": "55",
-        "desc": "PROCEDURE DEVELOPMENT UPDATES"
+        "desc": "PROCEDURE Dev. UPDATES"
     },
     {
         "ratn": "56",
-        "desc": "Material Specifications - New and Revised"
+        "desc": "Material Specs - New + Revised"
     },
     {
         "ratn": "57",
-        "desc": "SUPPORT - Purchasing - Ride Control"
+        "desc": "SUPPORT - RC Purchasing"
     },
     {
         "ratn": "58",
-        "desc": "SUPPORT - Purchasing - Elastomers"
+        "desc": "SUPPORT - EL Purchasing"
     },
     {
         "ratn": "59",
-        "desc": "SUPPORT - Purchasing - Exhaust"
+        "desc": "SUPPORT - EC Purchasing"
     },
     {
         "ratn": "63",
-        "desc": "AM RC EX Customer Sales Support"
+        "desc": "AM RC EC Customer Sales"
     },
     {
         "ratn": "64",
-        "desc": "AM RC EX Marketing Support"
+        "desc": "AM RC EC Marketing"
     },
     {
         "ratn": "65",
-        "desc": "AM RC EX Techline Support"
+        "desc": "AM RC EC Techline"
     },
     {
         "ratn": "66",
-        "desc": "Six Sigma engineering support"
+        "desc": "Six Sigma engineering"
     },
     {
         "ratn": "67",
-        "desc": "Aftermarket Trade Show Seminar Event"
+        "desc": "Aftermarket Trade Show Seminar"
     },
     {
         "ratn": "68",
-        "desc": "RC CAD CAE user downtime due to system plotting issues"
+        "desc": "RC user downtime due to plotting"
     },
     {
         "ratn": "69",
@@ -265,7 +265,7 @@
     },
     {
         "ratn": "77",
-        "desc": "ATLAS Global Product Data Management"
+        "desc": "ATLAS Global Product Data MGMT"
     },
     {
         "ratn": "78",
@@ -273,19 +273,19 @@
     },
     {
         "ratn": "82",
-        "desc": "Suzhou Support Hours"
+        "desc": "Suzhou Hours"
     },
     {
         "ratn": "E100001022A",
-        "desc": "DCX EX ALL SERVICE"
+        "desc": "DCX EC ALL SERVICE"
     },
     {
         "ratn": "E100001334",
-        "desc": "MAT ENG RC MATERIAL SUBSTITUTION CR ALTERNATIVES"
+        "desc": "MAT ENG RC MAT SUBSTITUTION "
     },
     {
         "ratn": "E100001354",
-        "desc": "MAT ENG RC QUALITY CONTROL SUPPORT"
+        "desc": "MAT ENG RC QUALITY CONTROL"
     },
     {
         "ratn": "E100001357",
@@ -293,27 +293,27 @@
     },
     {
         "ratn": "E100001358",
-        "desc": "MAT ENG RC SPECIFICATION CONSOLIDATION"
+        "desc": "MAT ENG RC SPEC CONSOLIDATION"
     },
     {
         "ratn": "E100001359",
-        "desc": "VEH DYNAMICS RC RIDE DEVELOPMENT"
+        "desc": "VEH DYNAMICS RC RIDE Dev."
     },
     {
         "ratn": "E100001399",
-        "desc": "MAT ENG RC GENERIC METALLURGY"
+        "desc": "MAT ENG RC GENERIC MET"
     },
     {
         "ratn": "E100001416A",
-        "desc": "MAT ENG EL GENERAL METALLURGY"
+        "desc": "MAT ENG EL GENERAL MET"
     },
     {
         "ratn": "E100001443A",
-        "desc": "DURABILITY EC NVH INTERNAL PROJECTS"
+        "desc": "DURABILITY EC NVH INT PROJECTS"
     },
     {
         "ratn": "E100001448A",
-        "desc": "AM RC RECREATION VEHICLE PROGRAM"
+        "desc": "AM RC RECREATION VEC"
     },
     {
         "ratn": "E100001451A",
@@ -345,11 +345,11 @@
     },
     {
         "ratn": "E100001504B",
-        "desc": "HD EL ADVANCED PRODUCT DEVELOPMENT"
+        "desc": "HD EL ADVANCED PRODUCT Dev."
     },
     {
         "ratn": "E100001505B",
-        "desc": "HD EL ALL OTHER SPECIALTY ELASTOMER"
+        "desc": "HD EL ALL OTHER SPECIALTY"
     },
     {
         "ratn": "E100001506B",
@@ -453,11 +453,11 @@
     },
     {
         "ratn": "E100001596A",
-        "desc": "GM EX GMSPO CURRENT SERVICE PARTS SUPPORT"
+        "desc": "GM EX GMSPO CURRENT SERVICE"
     },
     {
         "ratn": "E100001600",
-        "desc": "DCX RC RS 01-06 MODULE STRUT SPRING"
+        "desc": "DCX RC RS 01-06 MODULE STRUT"
     },
     {
         "ratn": "E100001615",
@@ -469,7 +469,7 @@
     },
     {
         "ratn": "E100001620A",
-        "desc": "RC AM RANCHO SUSPENSION DEVELOPMENT"
+        "desc": "RC AM RANCHO SUSPENSION Dev."
     },
     {
         "ratn": "E100001623A",
@@ -481,7 +481,7 @@
     },
     {
         "ratn": "E100001642A",
-        "desc": "TUN DEV EX TRAINING ACOUSTICS AND STRUCTURAL VIBRATION"
+        "desc": "TUN DEV EX TRAINING ACOUSTICS + STRUCTURAL VIBRATION"
     },
     {
         "ratn": "E100001648",
@@ -489,15 +489,15 @@
     },
     {
         "ratn": "E100001691",
-        "desc": "GM RC GMT 820 830 00-01 STEERING DAMPER"
+        "desc": "GM RC GMT820 830 00-01 STEERING DAMPER"
     },
     {
         "ratn": "E100001707A",
-        "desc": "PROD ENG EL FEA MATERIAL CHARACTERIZATION"
+        "desc": "PROD ENG EL FEA CHARACTERIZATION"
     },
     {
         "ratn": "E100001710A",
-        "desc": "PROD ENG EL DURABILITY AND CRACK GROWTH OF ELASTOMERS"
+        "desc": "PROD ENG EL FEA DURABILITY"
     },
     {
         "ratn": "E100001712",
@@ -505,7 +505,7 @@
     },
     {
         "ratn": "E100001723A",
-        "desc": "RC AM KINETIC SUSPENSION - DEVELOPMENT"
+        "desc": "RC AM KINETIC SUSPENSION - Dev."
     },
     {
         "ratn": "E100001732A",
@@ -513,7 +513,7 @@
     },
     {
         "ratn": "E100001739A",
-        "desc": "AM RC SEVERE SERVICE RIDE APPLICATIONS"
+        "desc": "AM RC SEVERE SERVICE RIDE Appl."
     },
     {
         "ratn": "E100001742",
@@ -525,7 +525,7 @@
     },
     {
         "ratn": "E100001745A",
-        "desc": "AM RC GAS MAG 70 NGBT PRODUCT LAUNCH"
+        "desc": "AM RC GAS MAG 70 NGBT"
     },
     {
         "ratn": "E100001746A",
@@ -533,23 +533,23 @@
     },
     {
         "ratn": "E100001748A",
-        "desc": "AM RC HEAVY DUTY NEW CATALOG RELEASE SUPPORT"
+        "desc": "AM RC HD CATALOG RELEASE"
     },
     {
         "ratn": "E100001755",
-        "desc": "PROD DEV RC BLACK BELT-SIX SIGMA ACTIVITY"
+        "desc": "PROD DEV RC BLACK BELT-SIX SIGMA"
     },
     {
         "ratn": "E100001760",
-        "desc": "PROD ENG RC STANDARDIZATION INITIATIVE"
+        "desc": "PROD ENG RC ST+ARDIZATION INITIATIVE"
     },
     {
         "ratn": "E100001801A",
-        "desc": "AM Rancho Suspension - Prototype Shop"
+        "desc": "AM Rancho Suspension - Proto Shop"
     },
     {
         "ratn": "E100001802A",
-        "desc": "AM Rancho Suspension - Engineering Services"
+        "desc": "AM Rancho Suspension - Eng Serv"
     },
     {
         "ratn": "E100001824",
@@ -557,7 +557,7 @@
     },
     {
         "ratn": "E100001825",
-        "desc": "DCX RC TJ 02 EGYPT HIGH TEMP MILITARY"
+        "desc": "DCX RC TJ 02 EGYPT HIGH TEMP MIL"
     },
     {
         "ratn": "E100001826A",
@@ -569,7 +569,7 @@
     },
     {
         "ratn": "E100001832",
-        "desc": "GM RC 04 H2 - HUMMER MONOTUBE DAMPERS"
+        "desc": "GM RC 04 H2 - HUMMER DAMPERS"
     },
     {
         "ratn": "E100001886",
@@ -581,19 +581,19 @@
     },
     {
         "ratn": "E100001891A",
-        "desc": "AM RC Pass Car Lt. Truck Inspection"
+        "desc": "AM RC Pass Car Lt. Truck Insp."
     },
     {
         "ratn": "E100001904A",
-        "desc": "MAT ENG EL Milan Manufacturing Engg. Support"
+        "desc": "MAT ENG EL Milan Mfg Eng."
     },
     {
         "ratn": "E100001905A",
-        "desc": "MAT ENG EL Angola Plant Support"
+        "desc": "MAT ENG EL Angola Plant"
     },
     {
         "ratn": "E100001907A",
-        "desc": "MAT ENG EL Napoleon Plant Support"
+        "desc": "MAT ENG EL Napoleon Plant"
     },
     {
         "ratn": "E100001922",
@@ -605,7 +605,7 @@
     },
     {
         "ratn": "E100001927A",
-        "desc": "AM RC Broad Market Line Management"
+        "desc": "AM RC Broad Market Line MGMT"
     },
     {
         "ratn": "E100001939",
@@ -625,7 +625,7 @@
     },
     {
         "ratn": "E100001988A",
-        "desc": "Modular Assy Market test and launch"
+        "desc": "Modular Assy Market test + launch"
     },
     {
         "ratn": "E100001989",
@@ -661,7 +661,7 @@
     },
     {
         "ratn": "E100002085",
-        "desc": "KINETIC RC Generic H2 Development"
+        "desc": "KINETIC RC Generic H2 Dev."
     },
     {
         "ratn": "E100002093A",
@@ -669,7 +669,7 @@
     },
     {
         "ratn": "E100002112",
-        "desc": "AM RC Six Sigma - Black Belt Support 01-03"
+        "desc": "AM RC Six Sigma - Black Belt 01-03"
     },
     {
         "ratn": "E100002129",
@@ -677,11 +677,11 @@
     },
     {
         "ratn": "E100002131",
-        "desc": "GM RC GMT900 07 Full Size Truck and SUV"
+        "desc": "GM RC GMT900 07"
     },
     {
         "ratn": "E100002143A",
-        "desc": "MAT ENG EX Advanced Cold Spun Converter Design Standards"
+        "desc": "MAT ENG EX Advanced Cold Spun Converter Design St+ards"
     },
     {
         "ratn": "E100002144A",
@@ -725,11 +725,11 @@
     },
     {
         "ratn": "E100002169",
-        "desc": "MFG OPER RC Bluebird Base Assy from Celaya to Hartwell"
+        "desc": "MFG OPER RC Bluebird Assy move"
     },
     {
         "ratn": "E100002173",
-        "desc": "AM EX HD BTO Support"
+        "desc": "AM EX HD BTO"
     },
     {
         "ratn": "E100002178",
@@ -737,7 +737,7 @@
     },
     {
         "ratn": "E100002198A",
-        "desc": "MAT ENG EL Improving Laboratory Procedures"
+        "desc": "MAT ENG EL Improving Lab Procedures"
     },
     {
         "ratn": "E100002204",
@@ -753,7 +753,7 @@
     },
     {
         "ratn": "E100002208A",
-        "desc": "DCX EC 04 DR Heavy Duty Gas Only"
+        "desc": "DCX EC 04 DR HD Gas Only"
     },
     {
         "ratn": "E100002234",
@@ -761,7 +761,7 @@
     },
     {
         "ratn": "E100002239",
-        "desc": "NISSAN RC X61B 05 - 10 Pickup + S.U.V."
+        "desc": "NISSAN RC X61B 05-10"
     },
     {
         "ratn": "E100002247A",
@@ -769,11 +769,11 @@
     },
     {
         "ratn": "E100002250A",
-        "desc": "DCX EC 04 DR Heavy Duty Diesel Truck"
+        "desc": "DCX EC 04 DR HD Diesel Truck"
     },
     {
         "ratn": "E100002254",
-        "desc": "MFG ENG RC Process Standardization"
+        "desc": "MFG ENG RC Process St+ardization"
     },
     {
         "ratn": "E100002255",
@@ -781,11 +781,11 @@
     },
     {
         "ratn": "E100002257",
-        "desc": "MFG ENG RC Stamping and Supplier Development"
+        "desc": "MFG ENG RC Stamping + Supplier Dev."
     },
     {
         "ratn": "E100002258",
-        "desc": "MFG ENG RC Process and Technology Development"
+        "desc": "MFG ENG RC Process + Tech Dev."
     },
     {
         "ratn": "E100002259",
@@ -797,7 +797,7 @@
     },
     {
         "ratn": "E100002272A",
-        "desc": "EC Australian Support Activity"
+        "desc": "EC Australian Activity"
     },
     {
         "ratn": "E100002276A",
@@ -809,7 +809,7 @@
     },
     {
         "ratn": "E100002302C",
-        "desc": "JOE EC I193 510 05 Isuzu I190 510 Thailand"
+        "desc": "JOE EC I193 510 05 Isuzu I190 510 Thail+"
     },
     {
         "ratn": "E100002317A",
@@ -817,7 +817,7 @@
     },
     {
         "ratn": "E100002322",
-        "desc": "Appearance Product Supportform - 03 Develop Launch new products"
+        "desc": "Appearance Product Support"
     },
     {
         "ratn": "E100002325A",
@@ -837,7 +837,7 @@
     },
     {
         "ratn": "E100002347B",
-        "desc": "HDS EL European Elastomer Support for Ermua"
+        "desc": "HDS EL European Elastomer Ermua"
     },
     {
         "ratn": "E100002350",
@@ -845,7 +845,7 @@
     },
     {
         "ratn": "E100002360",
-        "desc": "EC Prototype Plant Support and External Customers"
+        "desc": "EC Prototype Plant Support + Ext Cust"
     },
     {
         "ratn": "E100002365A",
@@ -857,7 +857,7 @@
     },
     {
         "ratn": "E100002375B",
-        "desc": "AM RC Rancho UTV and Cosmetic Project Update"
+        "desc": "AM RC Rancho UTV + Cosmetic Project Update"
     },
     {
         "ratn": "E100002378",
@@ -869,7 +869,7 @@
     },
     {
         "ratn": "E100002381A",
-        "desc": "AM RC DNX Pro Series Various Coil Spring with Damper"
+        "desc": "AM RC DNX Pro Series Various Coil Spring w\\Damper"
     },
     {
         "ratn": "E100002384A",
@@ -977,7 +977,7 @@
     },
     {
         "ratn": "E100002503",
-        "desc": "DCX RC 07 JK Wrangler Shocks and Steering Damper"
+        "desc": "DCX RC 07 JK Wrangler Shocks + Steering Damper"
     },
     {
         "ratn": "E100002504",
@@ -985,7 +985,7 @@
     },
     {
         "ratn": "E100002508",
-        "desc": "CVS EC International Truck and Engine EC 07"
+        "desc": "CVS EC International Truck + Engine EC 07"
     },
     {
         "ratn": "E100002510",
@@ -1001,7 +1001,7 @@
     },
     {
         "ratn": "E100002525A",
-        "desc": "NISSAN EC X61C 07 Heavy Duty Truck"
+        "desc": "NISSAN EC X61C 07 HD Truck"
     },
     {
         "ratn": "E100002526",
@@ -1013,11 +1013,11 @@
     },
     {
         "ratn": "E100002548",
-        "desc": "GM EC GMT800 Heavy Duty Pick Up 07 Emissions"
+        "desc": "GM EC GMT800 HD Pick Up 07 Emissions"
     },
     {
         "ratn": "E100002549",
-        "desc": "GM EC GMT900 Heavy Duty Pick Ups 08-12 Full Exhaust System"
+        "desc": "GM EC GMT900 HD Pick Ups 08-12 Full Exhaust System"
     },
     {
         "ratn": "E100002556",
@@ -1037,7 +1037,7 @@
     },
     {
         "ratn": "E100002582A",
-        "desc": "TOYOTA EC Highlander 08 MY 398L SUV"
+        "desc": "TOYOTA EC Highl+er 08 MY 398L SUV"
     },
     {
         "ratn": "E100002594",
@@ -1065,7 +1065,7 @@
     },
     {
         "ratn": "E100002624",
-        "desc": "GM RC GMX 381 Epsilon Convertible Rear Monotube"
+        "desc": "GM RC GMX381 Epsilon Convertible Rear Monotube"
     },
     {
         "ratn": "E100002633",
@@ -1077,7 +1077,7 @@
     },
     {
         "ratn": "E100002646",
-        "desc": "GM EC Epsilon2 09-13 NA Build Global Support"
+        "desc": "GM EC Epsilon2 09-13 NA Build Global"
     },
     {
         "ratn": "E100002650",
@@ -1089,11 +1089,11 @@
     },
     {
         "ratn": "E100002658",
-        "desc": "MFG RC Proto + Test Move from Hartwell t"
+        "desc": "MFG RC Proto + Test Move"
     },
     {
         "ratn": "E100002659",
-        "desc": "MFG RC Paint Line Upgrade in Celaya"
+        "desc": "MFG RC Paint Line Upgrade"
     },
     {
         "ratn": "E100002660",
@@ -1105,7 +1105,7 @@
     },
     {
         "ratn": "E100002681B",
-        "desc": "NISSAN EL OEM Development"
+        "desc": "NISSAN EL OEM Dev."
     },
     {
         "ratn": "E100002684",
@@ -1173,7 +1173,7 @@
     },
     {
         "ratn": "E100002769A",
-        "desc": "MAN OPS EL China Elastomer Startup"
+        "desc": "MAN OPS EL China Startup"
     },
     {
         "ratn": "E100002774",
@@ -1209,11 +1209,11 @@
     },
     {
         "ratn": "E100002792",
-        "desc": "AM RC NEW REL for Pass Car + Lt. Trk Applications"
+        "desc": "AM RC NEW REL for Pass Car + Lt. Trk Apps"
     },
     {
         "ratn": "E100002793",
-        "desc": "AM RC MAINTENANCE for Pass. Car + Lt. Trk Applications"
+        "desc": "AM RC MAINTENANCE for Pass. Car + Lt. Trk Apps"
     },
     {
         "ratn": "E100002794",
@@ -1237,11 +1237,11 @@
     },
     {
         "ratn": "E100002799",
-        "desc": "AM RC Gas Spring Rel. + Maintenance for Various Applications"
+        "desc": "AM RC Gas Spring Rel. + Maintenance for Various Appl."
     },
     {
         "ratn": "E100002800",
-        "desc": "AM RC VEHICLE INSPECTIONS for Pass. Car + Lt Trk Applications"
+        "desc": "AM RC VEHICLE INSPECTIONS for Pass. Car + Lt Trk Apps"
     },
     {
         "ratn": "E100002801",
@@ -1257,7 +1257,7 @@
     },
     {
         "ratn": "E100002807",
-        "desc": "TOYOTA RAV4 09-13 4cyl and V-6"
+        "desc": "TOYOTA RAV4 09-13 4cyl + V-6"
     },
     {
         "ratn": "E100002809",
@@ -1269,7 +1269,7 @@
     },
     {
         "ratn": "E100002815",
-        "desc": "GM RC CES Development"
+        "desc": "GM RC CES Dev."
     },
     {
         "ratn": "E100002816",
@@ -1321,7 +1321,7 @@
     },
     {
         "ratn": "E100002879",
-        "desc": "EC Test Facility Open House - Other Desc."
+        "desc": "EC Test Facility Open House"
     },
     {
         "ratn": "E100002912",
@@ -1429,7 +1429,7 @@
     },
     {
         "ratn": "E100003002",
-        "desc": "CVS EC Harley Davidson Tight 09 Full Exh System"
+        "desc": "CVS EC HARLEY Tight 09 Full Exh System"
     },
     {
         "ratn": "E100003004",
@@ -1453,7 +1453,7 @@
     },
     {
         "ratn": "E100003014",
-        "desc": "ADV ENG EC Walker India Test Support 25OCT06 06 Other SBU Test Serv"
+        "desc": "ADV ENG EC Walker India Test 25OCT06 06 Other SBU Test Serv"
     },
     {
         "ratn": "E100003015",
@@ -1461,23 +1461,23 @@
     },
     {
         "ratn": "E100003017",
-        "desc": "ADV ENG EC Thailand C100 06 Conv Test Support"
+        "desc": "ADV ENG EC Thail+ C100 06 Conv Test"
     },
     {
         "ratn": "E100003018",
-        "desc": "AM EX Cust. Specific Support NAPA"
+        "desc": "AM EX Cust. - NAPA"
     },
     {
         "ratn": "E100003019",
-        "desc": "AM EX Cust. Specific Support - ADVC"
+        "desc": "AM EX Cust. - ADVC"
     },
     {
         "ratn": "E100003020",
-        "desc": "AM EX Cust. Specific Support - MIDAS"
+        "desc": "AM EX Cust. - MIDAS"
     },
     {
         "ratn": "E100003021",
-        "desc": "AM EX Cust. Specific Support - Other"
+        "desc": "AM EX Cust. - Other"
     },
     {
         "ratn": "E100003022",
@@ -1553,7 +1553,7 @@
     },
     {
         "ratn": "E100003072",
-        "desc": "ADV ENG EC - Non-Std Testing Development for Objectionable Sounds"
+        "desc": "ADV ENG EC - Non-Std Testing Dev. for Objectionable Sounds"
     },
     {
         "ratn": "E100003073A",
@@ -1577,15 +1577,15 @@
     },
     {
         "ratn": "E100003078",
-        "desc": "MAT ENG RC Litigation Support"
+        "desc": "MAT ENG RC Litigation"
     },
     {
         "ratn": "E100003079",
-        "desc": "MAT ENG RC Generic Adhesives Support"
+        "desc": "MAT ENG RC Generic Adhesives"
     },
     {
         "ratn": "E100003080",
-        "desc": "MAT ENG RC Generic Powder Metallurgy Programs"
+        "desc": "MAT ENG RC Generic Powder MET Programs"
     },
     {
         "ratn": "E100003082",
@@ -1597,7 +1597,7 @@
     },
     {
         "ratn": "E100003095",
-        "desc": "Training + Consulting 07 Tuning + BP Support"
+        "desc": "Training + Consulting 07 Tuning"
     },
     {
         "ratn": "E100003097",
@@ -1665,11 +1665,11 @@
     },
     {
         "ratn": "E100003137",
-        "desc": "ADV ENG EC KBE 10 Supporting Team Resource Hours"
+        "desc": "ADV ENG EC KBE 10"
     },
     {
         "ratn": "E100003138",
-        "desc": "MKTG EC-Master Presentation - Maintenance"
+        "desc": "MKTG EC-Master Presentation"
     },
     {
         "ratn": "E100003139A",
@@ -1677,7 +1677,7 @@
     },
     {
         "ratn": "E100003147",
-        "desc": "ADV EC 10 Cone Development - Other Descrp."
+        "desc": "ADV EC 10 Cone Dev. - Other Descrp."
     },
     {
         "ratn": "E100003149A",
@@ -1705,7 +1705,7 @@
     },
     {
         "ratn": "E100003163",
-        "desc": "GM RC GMT900 10-18 Next Generation H.D."
+        "desc": "GM RC GMT900 10-18 Next Gen H.D."
     },
     {
         "ratn": "E100003167",
@@ -1725,7 +1725,7 @@
     },
     {
         "ratn": "E100003179",
-        "desc": "CATERPILLAR EC 11 Tier IV Emissions"
+        "desc": "CAT EC 11 Tier IV Emissions"
     },
     {
         "ratn": "E100003180",
@@ -1797,15 +1797,15 @@
     },
     {
         "ratn": "E100003213",
-        "desc": "ADV ENG EC Elim-NOx 10 Tank and Pump"
+        "desc": "ADV ENG EC Elim-NOx 10 Tank + Pump"
     },
     {
         "ratn": "E100003215",
-        "desc": "ADV ENG EC Elim-NOx 10 Full System Integration"
+        "desc": "ADV ENG EC Elim-NOx 10 Full Sys Integration"
     },
     {
         "ratn": "E100003217",
-        "desc": "ADV ENG EC Elim-NOx 10 Lines and Heated Lines"
+        "desc": "ADV ENG EC Elim-NOx 10 Lines + Heated Lines"
     },
     {
         "ratn": "E100003220",
@@ -1845,7 +1845,7 @@
     },
     {
         "ratn": "E100003274",
-        "desc": "ADV ENG EC Elim-NOx Development Support"
+        "desc": "ADV ENG EC Elim-NOx Dev."
     },
     {
         "ratn": "E100003278",
@@ -1897,7 +1897,7 @@
     },
     {
         "ratn": "E100003318",
-        "desc": "CHRYSLER EC DS HEV 10.5 - Other Description"
+        "desc": "CHRY EC DS HEV 10.5 - Other Description"
     },
     {
         "ratn": "E100003319A",
@@ -1917,11 +1917,11 @@
     },
     {
         "ratn": "E100003327",
-        "desc": "CHRYSLER EC LX 11-15"
+        "desc": "CHRY EC LX 11-15"
     },
     {
         "ratn": "E100003330",
-        "desc": "JOEBU KOE EC 12 Hyundai HC Injector Development"
+        "desc": "JOEBU KOE EC 12 Hyundai HC Injector Dev."
     },
     {
         "ratn": "E100003331",
@@ -1957,7 +1957,7 @@
     },
     {
         "ratn": "E100003351",
-        "desc": "GM EC Global Delta - 11-15 NA Acoustic Support"
+        "desc": "GM EC Global Delta - 11-15 NA Acoustic"
     },
     {
         "ratn": "E100003353",
@@ -1965,11 +1965,11 @@
     },
     {
         "ratn": "E100003361",
-        "desc": "FORD EC Australia 123 10.5 Cold End Development"
+        "desc": "FORD EC Australia 123 10.5 Cold End Dev."
     },
     {
         "ratn": "E100003363",
-        "desc": "PROD ENG RC Digital Valve 08 CES Development"
+        "desc": "PROD ENG RC Digital Valve 08 CES Dev."
     },
     {
         "ratn": "E100003367",
@@ -1977,7 +1977,7 @@
     },
     {
         "ratn": "E100003379",
-        "desc": "JOE KOE EC Nissan X42H 10-15 Quest Elgrand"
+        "desc": "JOE KOE EC Nissan X42H 10-15 Quest Elgr+"
     },
     {
         "ratn": "E100003380",
@@ -2005,11 +2005,11 @@
     },
     {
         "ratn": "E100003395",
-        "desc": "Global Valve Development"
+        "desc": "Global Valve Dev."
     },
     {
         "ratn": "E100003399",
-        "desc": "HYUNDAI EC 11 Urea SCR Development Project"
+        "desc": "HYUNDAI EC 11 Urea SCR Dev. Project"
     },
     {
         "ratn": "E100003400",
@@ -2037,7 +2037,7 @@
     },
     {
         "ratn": "E100003415A",
-        "desc": "GM EL GMT900 Heavy Duty 11 Hydro Body Mount"
+        "desc": "GM EL GMT900 HD 11 Hydro Body Mount"
     },
     {
         "ratn": "E100003417",
@@ -2049,7 +2049,7 @@
     },
     {
         "ratn": "E100003421",
-        "desc": "CHRYSLER EC Mexico 10.5 DX3 Diesel"
+        "desc": "CHRY EC Mexico 10.5 DX3 Diesel"
     },
     {
         "ratn": "E100003423",
@@ -2057,7 +2057,7 @@
     },
     {
         "ratn": "E100003424",
-        "desc": "Kinetic Support - Other Description"
+        "desc": "Kinetic Support"
     },
     {
         "ratn": "E100003428",
@@ -2077,11 +2077,11 @@
     },
     {
         "ratn": "E100003439",
-        "desc": "ELIM-NOx EC Doosan support"
+        "desc": "ELIM-NOx EC Doosan"
     },
     {
         "ratn": "E100003443A",
-        "desc": "GM EL EPII Delta Exhaust Suzhou Support"
+        "desc": "GM EL EPII Delta Exhaust Suzhou"
     },
     {
         "ratn": "E100003445",
@@ -2101,7 +2101,7 @@
     },
     {
         "ratn": "E100003455",
-        "desc": "CHRYSLER EC DH09 09 Single Wall Shell"
+        "desc": "CHRY EC DH09 09 Single Wall Shell"
     },
     {
         "ratn": "E100003456",
@@ -2129,11 +2129,11 @@
     },
     {
         "ratn": "E100003464",
-        "desc": "CAT EC 10 Multi-Layered Mat Wrap Development"
+        "desc": "CAT EC 10 Multi-Layered Mat Wrap Dev."
     },
     {
         "ratn": "E100003465",
-        "desc": "CHRYSLER EC DD DP 10 Cold End"
+        "desc": "CHRY EC DD DP 10 Cold End"
     },
     {
         "ratn": "E100003466",
@@ -2193,7 +2193,7 @@
     },
     {
         "ratn": "E100003491",
-        "desc": "CVS EC ISM BURNER DPF 12 New Holland Tractor Demo"
+        "desc": "CVS EC ISM BURNER DPF 12 New Holl+ Tractor Demo"
     },
     {
         "ratn": "E100003494",
@@ -2217,7 +2217,7 @@
     },
     {
         "ratn": "E100003502",
-        "desc": "ADV ENG EC ELIM-NOX GEN III INJECTOR DEVELOPMENT"
+        "desc": "ADV ENG EC ELIM-NOX GEN III INJECTOR Dev."
     },
     {
         "ratn": "E100003503",
@@ -2241,15 +2241,15 @@
     },
     {
         "ratn": "E100003508",
-        "desc": "CVS EC TIER 4  10 Interim Service Support"
+        "desc": "CVS EC TIER 4  10 Interim Service"
     },
     {
         "ratn": "E100003509",
-        "desc": "CVS EC CAT 07 ON-HIGHWAY SUPPORT"
+        "desc": "CVS EC CAT 07 ON-HIGHWAY"
     },
     {
         "ratn": "E100003510",
-        "desc": "CVS EC Caterpillar 10 Prototypes"
+        "desc": "CVS EC CAT 10 Prototypes"
     },
     {
         "ratn": "E100003515",
@@ -2257,7 +2257,7 @@
     },
     {
         "ratn": "E100003516",
-        "desc": "ADV ENG EC TRUE. CLEAN BURNER 12 ON-VEHICLE APPL. CASE NEW HOLLAND TRACTOR"
+        "desc": "ADV ENG EC TRUE. CLEAN BURNER 12 ON-VEHICLE APPL. CASE NEW HOLL+ TRACTOR"
     },
     {
         "ratn": "E100003518",
@@ -2281,15 +2281,15 @@
     },
     {
         "ratn": "E100003529",
-        "desc": "CHRYSLER EC JC49 12 3.6L Phoenix Engine DVP"
+        "desc": "CHRY EC JC49 12 3.6L Phoenix Engine DVP"
     },
     {
         "ratn": "E100003530",
-        "desc": "CVS EC HARLEY DAVIDSON 11 Tyranus Thresher Bulldog Mufflers"
+        "desc": "CVS EC HARLEY 11 Tyranus Thresher Bulldog Mufflers"
     },
     {
         "ratn": "E100003532",
-        "desc": "CHRYSLER EC 12 JK WRANGLER Hot End Y-Pipe Assembly"
+        "desc": "CHRY EC 12 JK WRANGLER Hot End Y-Pipe Assembly"
     },
     {
         "ratn": "E100003533",
@@ -2297,11 +2297,11 @@
     },
     {
         "ratn": "E100003534",
-        "desc": "US ARMY EL HDEL M1 ABRAMS 10 Contract For Bolster Pad Development"
+        "desc": "US ARMY EL HDEL M1 ABRAMS 10 Contract For Bolster Pad Dev."
     },
     {
         "ratn": "E100003536",
-        "desc": "FORD EL MUSTANG 10-12 Sta-Bar Links and Bushings"
+        "desc": "FORD EL MUSTANG 10-12 Sta-Bar Links + Bushings"
     },
     {
         "ratn": "E100003537",
@@ -2329,15 +2329,15 @@
     },
     {
         "ratn": "E100003546",
-        "desc": "CHRYSLER EL AUTOMOTIVE MAINTENANCE"
+        "desc": "CHRY EL AUTOMOTIVE MAINTENANCE"
     },
     {
         "ratn": "E100003547",
-        "desc": "CHRYSLER EL TRUCK MAINTENANCE"
+        "desc": "CHRY EL TRUCK MAINTENANCE"
     },
     {
         "ratn": "E100003548",
-        "desc": "CHRYSLER EL JEEP MAINTENANCE"
+        "desc": "CHRY EL JEEP MAINTENANCE"
     },
     {
         "ratn": "E100003549",
@@ -2373,7 +2373,7 @@
     },
     {
         "ratn": "E100003567",
-        "desc": "CHRYSLER EC CD-EVO 12 Chrysler - Fiat C+D Segment"
+        "desc": "CHRY EC CD-EVO 12 CHRY - Fiat C+D Segment"
     },
     {
         "ratn": "E100003568",
@@ -2393,7 +2393,7 @@
     },
     {
         "ratn": "E100003577",
-        "desc": "JOHN DEERE RC Nashville 11 Front and Rear Spring Over Shocks"
+        "desc": "JOHN DEERE RC Nashville 11 Front + Rear Spring Over Shocks"
     },
     {
         "ratn": "E100003579",
@@ -2417,7 +2417,7 @@
     },
     {
         "ratn": "E100003585",
-        "desc": "FORD EC C344 13 2.0L HEV AND PHEV"
+        "desc": "FORD EC C344 13 2.0L HEV + PHEV"
     },
     {
         "ratn": "E100003588",
@@ -2425,7 +2425,7 @@
     },
     {
         "ratn": "E100003589",
-        "desc": "RC LPPD - Lean Product Process Development"
+        "desc": "RC LPPD - Lean Product Process Dev."
     },
     {
         "ratn": "E100003592",
@@ -2453,7 +2453,7 @@
     },
     {
         "ratn": "E100003598",
-        "desc": "DIESEL AFTERTREATMENT 14 ELIM-NOX GEN III Injector Development"
+        "desc": "DIESEL AFTERTREATMENT 14 ELIM-NOX GEN III Injector Dev."
     },
     {
         "ratn": "E100003599",
@@ -2461,19 +2461,19 @@
     },
     {
         "ratn": "E100003600",
-        "desc": "GM RC K2XX 13 Front Module With Front And Rear Monotube Shocks"
+        "desc": "GM RC K2XX 13 Front Module w\\Front + Rear Monotube Shocks"
     },
     {
         "ratn": "E100003601",
-        "desc": "CHRYSLER EC 13 DJ D2 DD DP Full System Exhaust W SCR"
+        "desc": "CHRY EC 13 DJ D2 DD DP Full System Exhaust W SCR"
     },
     {
         "ratn": "E100003602",
-        "desc": "HARLEY DAVIDSON EC TRI KING 11 CVO Trike Muffler"
+        "desc": "HARLEY EC TRI KING 11 CVO Trike Muffler"
     },
     {
         "ratn": "E100003603",
-        "desc": "CHRYSLER EC 13 DD DP DJ D2 Urea Injector"
+        "desc": "CHRY EC 13 DD DP DJ D2 Urea Injector"
     },
     {
         "ratn": "E100003604",
@@ -2501,7 +2501,7 @@
     },
     {
         "ratn": "E100003614",
-        "desc": "CVS EC HARLEY DAVIDSON 11 Misc Protos and Small Projects"
+        "desc": "CVS EC HARLEY 11 Misc Protos + Small Projects"
     },
     {
         "ratn": "E100003617",
@@ -2529,7 +2529,7 @@
     },
     {
         "ratn": "E100003631",
-        "desc": "CVS EC PACCAR 12 Durability and Retrofit"
+        "desc": "CVS EC PACCAR 12 Durability + Retrofit"
     },
     {
         "ratn": "E100003634",
@@ -2549,15 +2549,15 @@
     },
     {
         "ratn": "E100003641",
-        "desc": "HYUNDAI EC QD FORTE 13 Hot and Cold End"
+        "desc": "HYUNDAI EC QD FORTE 13 Hot + Cold End"
     },
     {
         "ratn": "E100003642",
-        "desc": "CHRYSLER EC Dodge 13 Viper"
+        "desc": "CHRY EC Dodge 13 Viper"
     },
     {
         "ratn": "E100003643",
-        "desc": "CHRYSLER EC Dodge 13 DSLD Gas"
+        "desc": "CHRY EC Dodge 13 DSLD Gas"
     },
     {
         "ratn": "E100003644",
@@ -2577,7 +2577,7 @@
     },
     {
         "ratn": "E100003655",
-        "desc": "HONDA EL Pilot Odyssey 11 Honda OE Development"
+        "desc": "HONDA EL Pilot Odyssey 11 Honda OE Dev."
     },
     {
         "ratn": "E100003659",
@@ -2609,7 +2609,7 @@
     },
     {
         "ratn": "E100003670",
-        "desc": "CVS EC Doosan 3.4L 15 DOC DPF SCR With Dosing"
+        "desc": "CVS EC Doosan 3.4L 15 DOC DPF SCR w\\Dosing"
     },
     {
         "ratn": "E100003672A",
@@ -2641,11 +2641,11 @@
     },
     {
         "ratn": "E100003680",
-        "desc": "CHRYSLER EC JC49 11 2.0L DSL AWD"
+        "desc": "CHRY EC JC49 11 2.0L DSL AWD"
     },
     {
         "ratn": "E100003682",
-        "desc": "CVS EC CATERPILLAR Tier 1-3 Diesel Retrofit On and Off-Road"
+        "desc": "CVS EC CAT Tier 1-3 Diesel Retrofit On + Off-Road"
     },
     {
         "ratn": "E100003683",
@@ -2685,7 +2685,7 @@
     },
     {
         "ratn": "E100003694",
-        "desc": "RC GEN II 12 Injector NAEC Support"
+        "desc": "RC GEN II 12 Injector NAEC"
     },
     {
         "ratn": "E100003701",
@@ -2781,7 +2781,7 @@
     },
     {
         "ratn": "E100003735",
-        "desc": "CUSW EL 13 Chrysler C-Car Platform"
+        "desc": "CUSW EL 13 CHRY C-Car Platform"
     },
     {
         "ratn": "E100003738",
@@ -2797,11 +2797,11 @@
     },
     {
         "ratn": "E100003744",
-        "desc": "ENG EC General 11 de Global Support"
+        "desc": "ENG EC General 11 Global"
     },
     {
         "ratn": "E100003745",
-        "desc": "CHRYSLER EC DJ D2 14 Ram HD Gas 5.7 + 6.4 L 14"
+        "desc": "CHRY EC DJ D2 14 Ram HD Gas 5.7 + 6.4 L 14"
     },
     {
         "ratn": "E100003748",
@@ -2829,7 +2829,7 @@
     },
     {
         "ratn": "E100003755",
-        "desc": "FORD EL Development 12+ Stabar Bushing Optimization"
+        "desc": "FORD EL Dev. 12+ Stabar Bushing Optimization"
     },
     {
         "ratn": "E100003756",
@@ -2893,7 +2893,7 @@
     },
     {
         "ratn": "E100003780",
-        "desc": "CVS EC STX 30.0L - 45.0L Maring Diesel 13 at Development"
+        "desc": "CVS EC STX 30.0L - 45.0L Maring Diesel 13 at Dev."
     },
     {
         "ratn": "E100003781",
@@ -2941,7 +2941,7 @@
     },
     {
         "ratn": "E100003797",
-        "desc": "CHRYSLER EC JC49 13 2.99L"
+        "desc": "CHRY EC JC49 13 2.99L"
     },
     {
         "ratn": "E100003799",
@@ -2961,19 +2961,19 @@
     },
     {
         "ratn": "E100003810",
-        "desc": "VW AUDI EL 11-15 OEM Development"
+        "desc": "VW AUDI EL 11-15 OEM Dev."
     },
     {
         "ratn": "E100003811",
-        "desc": "CVS EC CAT T4 Interm EU 12 Edenkoben Support"
+        "desc": "CVS EC CAT T4 Interm EU 12 Edenkoben"
     },
     {
         "ratn": "E100003812",
-        "desc": "CVS EC CAT T4 Final 13 C7.1 IPSD Support"
+        "desc": "CVS EC CAT T4 Final 13 C7.1 IPSD"
     },
     {
         "ratn": "E100003813",
-        "desc": "CVS EC CAT Tier 4 Final 13 C4.4 Aftertreatment IPSD Support"
+        "desc": "CVS EC CAT Tier 4 Final 13 C4.4 Aftertreatment IPSD"
     },
     {
         "ratn": "E100003814",
@@ -3009,11 +3009,11 @@
     },
     {
         "ratn": "E100003823",
-        "desc": "CHRYSLER EC 5.7L HD Gas 13.5 DJ D2 HD GAS 5.7L"
+        "desc": "CHRY EC 5.7L HD Gas 13.5 DJ D2 HD GAS 5.7L"
     },
     {
         "ratn": "E100003824",
-        "desc": "CHRYSLER EC DJ Euro III 13.5 6.7L Diesel"
+        "desc": "CHRY EC DJ Euro III 13.5 6.7L Diesel"
     },
     {
         "ratn": "E100003825",
@@ -3021,7 +3021,7 @@
     },
     {
         "ratn": "E100003826",
-        "desc": "PACCAR RC 11 CAB Suspension Development"
+        "desc": "PACCAR RC 11 CAB Suspension Dev."
     },
     {
         "ratn": "E100003828",
@@ -3033,7 +3033,7 @@
     },
     {
         "ratn": "E100003830",
-        "desc": "GM EC Buick Verano 13-17 LUK and LHU Powertrains"
+        "desc": "GM EC Buick Verano 13-17 LUK + LHU Powertrains"
     },
     {
         "ratn": "E100003831",
@@ -3041,7 +3041,7 @@
     },
     {
         "ratn": "E100003832",
-        "desc": "CHRYSLER EC DSLD 13.5 5.7L wCYG. Trans"
+        "desc": "CHRY EC DSLD 13.5 5.7L wCYG. Trans"
     },
     {
         "ratn": "E100003833",
@@ -3065,15 +3065,15 @@
     },
     {
         "ratn": "E100003838",
-        "desc": "CHRYSLER EC DJ EUV 14 6.7L Diesel"
+        "desc": "CHRY EC DJ EUV 14 6.7L Diesel"
     },
     {
         "ratn": "E100003839",
-        "desc": "CHRYSLER EC 14 DSlight Duty Ram 3.0L Diesel Appl"
+        "desc": "CHRY EC 14 DSlight Duty Ram 3.0L Diesel Appl"
     },
     {
         "ratn": "E100003840",
-        "desc": "CHRYSLER EL RU 14 CHRYSLER Mini-Van"
+        "desc": "CHRY EL RU 14 CHRY Mini-Van"
     },
     {
         "ratn": "E100003841",
@@ -3109,7 +3109,7 @@
     },
     {
         "ratn": "E100003852",
-        "desc": "GM RC HOLDEN Z2XXX 14 MY Australia Support"
+        "desc": "GM RC HOLDEN Z2XXX 14 MY Australia"
     },
     {
         "ratn": "E100003853",
@@ -3121,15 +3121,15 @@
     },
     {
         "ratn": "E100003855",
-        "desc": "D2UX EL 15 Bushing Development"
+        "desc": "D2UX EL 15 Bushing Dev."
     },
     {
         "ratn": "E100003857",
-        "desc": "CHRYSLER EC RT MCA 14.5 Minivan"
+        "desc": "CHRY EC RT MCA 14.5 Minivan"
     },
     {
         "ratn": "E100003858",
-        "desc": "ADV ENG EC  Generic HCI Control Software Development"
+        "desc": "ADV ENG EC  Generic HCI Control Software Dev."
     },
     {
         "ratn": "E100003859",
@@ -3137,23 +3137,23 @@
     },
     {
         "ratn": "E100003860",
-        "desc": "ADV ENG EC Generic HC-LNC Control Software Development"
+        "desc": "ADV ENG EC Generic HC-LNC Control Software Dev."
     },
     {
         "ratn": "E100003861",
-        "desc": "ADV ENG EC Generic True Clean Control Software Development"
+        "desc": "ADV ENG EC Generic True Clean Control Software Dev."
     },
     {
         "ratn": "E100003862",
-        "desc": "ADV ENG EC Generic Control Software Development"
+        "desc": "ADV ENG EC Generic Control Software Dev."
     },
     {
         "ratn": "E100003863",
-        "desc": "ADV ENG EC Generic XNOX Control Software Development"
+        "desc": "ADV ENG EC Generic XNOX Control Software Dev."
     },
     {
         "ratn": "E100003864",
-        "desc": "ADV ENG EC Calibration and Control Software Training"
+        "desc": "ADV ENG EC Calibration + Control Software Training"
     },
     {
         "ratn": "E100003865",
@@ -3161,7 +3161,7 @@
     },
     {
         "ratn": "E100003866",
-        "desc": "HARLEY DAVIDSON EC Dyna 14 Pipes"
+        "desc": "HARLEY EC Dyna 14 Pipes"
     },
     {
         "ratn": "E100003867",
@@ -3173,11 +3173,11 @@
     },
     {
         "ratn": "E100003869",
-        "desc": "CVS EC CATERPILLAR 400 Series 13 C1.5 + C2.2 Aftertreatment System"
+        "desc": "CVS EC CAT 400 Series 13 C1.5 + C2.2 Aftertreatment System"
     },
     {
         "ratn": "E100003871",
-        "desc": "FORD EC P558 17 Diesel and Gas"
+        "desc": "FORD EC P558 17 Diesel + Gas"
     },
     {
         "ratn": "E100003873",
@@ -3193,11 +3193,11 @@
     },
     {
         "ratn": "E100003876",
-        "desc": "CHRYSLER EL DD-DJ-D2-DP 13-18 Ram Truck"
+        "desc": "CHRY EL DD-DJ-D2-DP 13-18 Ram Truck"
     },
     {
         "ratn": "E100003877",
-        "desc": "CHRYSLER RC  JC 16 Lightweight Rear Shock"
+        "desc": "CHRY RC  JC 16 Lightweight Rear Shock"
     },
     {
         "ratn": "E100003878",
@@ -3209,7 +3209,7 @@
     },
     {
         "ratn": "E100003882",
-        "desc": "JAGUAR EL LAND ROVER 14-19 X260,X760,L550 Development"
+        "desc": "JAGUAR EL L+ ROVER 14-19 X260,X760,L550 Dev."
     },
     {
         "ratn": "E100003883",
@@ -3237,7 +3237,7 @@
     },
     {
         "ratn": "E100003893",
-        "desc": "CHRYSLER EC KL 15 2.0L Diesel SCR + Cold End DVP"
+        "desc": "CHRY EC KL 15 2.0L Diesel SCR + Cold End DVP"
     },
     {
         "ratn": "E100003894",
@@ -3245,11 +3245,11 @@
     },
     {
         "ratn": "E100003896",
-        "desc": "ADV ENG EC NA AE Test Development"
+        "desc": "ADV ENG EC NA AE Test Dev."
     },
     {
         "ratn": "E100003897",
-        "desc": "BRAZIL S.A. EC 14 HC LNC DEV. with MAN"
+        "desc": "BRAZIL S.A. EC 14 HC LNC DEV. w\\MAN"
     },
     {
         "ratn": "E100003899",
@@ -3277,7 +3277,7 @@
     },
     {
         "ratn": "E100003910",
-        "desc": "CHRYSLER EC JK Diesel 2.8L 15.5 Wrangler Euro 6 Diesel"
+        "desc": "CHRY EC JK Diesel 2.8L 15.5 Wrangler Euro 6 Diesel"
     },
     {
         "ratn": "E100003912",
@@ -3301,7 +3301,7 @@
     },
     {
         "ratn": "E100003919",
-        "desc": "CHRYSLER EC 17 Exhaust Heat Recovery System"
+        "desc": "CHRY EC 17 Exhaust Heat Recovery System"
     },
     {
         "ratn": "E100003920",
@@ -3317,15 +3317,15 @@
     },
     {
         "ratn": "E100003923",
-        "desc": "CHRYSLER EC VM MOTORI 14 XNOX Dosing System"
+        "desc": "CHRY EC VM MOTORI 14 XNOX Dosing System"
     },
     {
         "ratn": "E100003924",
-        "desc": "EL Torque Rods Future Torque Rod Development"
+        "desc": "EL Torque Rods Future Torque Rod Dev."
     },
     {
         "ratn": "E100003925",
-        "desc": "GM EC C1XX 17 NG LAMBDA AND THETA EPSILON"
+        "desc": "GM EC C1XX 17 NG LAMBDA + THETA EPSILON"
     },
     {
         "ratn": "E100003926",
@@ -3349,11 +3349,11 @@
     },
     {
         "ratn": "E100003936",
-        "desc": "ADV ENG EC 13 Air Source Development"
+        "desc": "ADV ENG EC 13 Air Source Dev."
     },
     {
         "ratn": "E100003937",
-        "desc": "ADV ENG EC HC LNC 14 Fluid Delivery Development"
+        "desc": "ADV ENG EC HC LNC 14 Fluid Delivery Dev."
     },
     {
         "ratn": "E100003938",
@@ -3389,7 +3389,7 @@
     },
     {
         "ratn": "E100003946",
-        "desc": "RC Development 13 RC2-RC1 FSD Valve"
+        "desc": "RC Dev. 13 RC2-RC1 FSD Valve"
     },
     {
         "ratn": "E100003948",
@@ -3401,7 +3401,7 @@
     },
     {
         "ratn": "E100003950",
-        "desc": "CHRYSLER EC JD 16 JD16"
+        "desc": "CHRY EC JD 16 JD16"
     },
     {
         "ratn": "E100003951",
@@ -3409,7 +3409,7 @@
     },
     {
         "ratn": "E100003952",
-        "desc": "CHRYSLER EC UF 16 2.0L Hot End"
+        "desc": "CHRY EC UF 16 2.0L Hot End"
     },
     {
         "ratn": "E100003954",
@@ -3425,7 +3425,7 @@
     },
     {
         "ratn": "E100003957",
-        "desc": "CHRYSLER EC UF 15 D-Segment Pass Car"
+        "desc": "CHRY EC UF 15 D-Segment Pass Car"
     },
     {
         "ratn": "E100003958",
@@ -3445,7 +3445,7 @@
     },
     {
         "ratn": "E100003962",
-        "desc": "FORD EC EXPLORER 16 CHINA Label and Bright Tips"
+        "desc": "FORD EC EXPLORER 16 CHINA Label + Bright Tips"
     },
     {
         "ratn": "E100003963",
@@ -3501,7 +3501,7 @@
     },
     {
         "ratn": "E100003980",
-        "desc": "CHRYSLER EC JD 2106.5 Dodge Journey"
+        "desc": "CHRY EC JD 2106.5 Dodge Journey"
     },
     {
         "ratn": "E100003981",
@@ -3537,7 +3537,7 @@
     },
     {
         "ratn": "E100003994",
-        "desc": "CATERPILLAR EC 15 C9-C32 CAT MARINE Medium Size Engines"
+        "desc": "CAT EC 15 C9-C32 CAT MARINE Medium Size Engines"
     },
     {
         "ratn": "E100003995",
@@ -3549,7 +3549,7 @@
     },
     {
         "ratn": "E100003997",
-        "desc": "CVS EC 13 Stationary Engine DVP Stationary Business Development"
+        "desc": "CVS EC 13 Stationary Engine DVP Stationary Business Dev."
     },
     {
         "ratn": "E100003998",
@@ -3581,7 +3581,7 @@
     },
     {
         "ratn": "E100004006",
-        "desc": "CHRYSLER EC KL 15 MY15 Emissions Variants"
+        "desc": "CHRY EC KL 15 MY15 Emissions Variants"
     },
     {
         "ratn": "E100004008",
@@ -3637,7 +3637,7 @@
     },
     {
         "ratn": "E100004022",
-        "desc": "HARTWELL RC 13 Paint BOM Standards"
+        "desc": "HARTWELL RC 13 Paint BOM St+ards"
     },
     {
         "ratn": "E100004023",
@@ -3649,11 +3649,11 @@
     },
     {
         "ratn": "E100004028",
-        "desc": "ADV ENG EC LARGE ENG - Natural Gas Market and Technology Investigation"
+        "desc": "ADV ENG EC LARGE ENG - Natural Gas Market + Tech Investigation"
     },
     {
         "ratn": "E100004029",
-        "desc": "CHRYSLER RC WD WK 17 Full Air Suspension"
+        "desc": "CHRY RC WD WK 17 Full Air Suspension"
     },
     {
         "ratn": "E100004030",
@@ -3721,7 +3721,7 @@
     },
     {
         "ratn": "E100004049",
-        "desc": "CHRYSLER EC KL 17 Hot End"
+        "desc": "CHRY EC KL 17 Hot End"
     },
     {
         "ratn": "E100004050",
@@ -3729,7 +3729,7 @@
     },
     {
         "ratn": "E100004051",
-        "desc": "ADV ENG EC WEICHAI WP-10 NG 17 ATS Development"
+        "desc": "ADV ENG EC WEICHAI WP-10 NG 17 ATS Dev."
     },
     {
         "ratn": "E100004053",
@@ -3741,15 +3741,15 @@
     },
     {
         "ratn": "E100004055",
-        "desc": "HARLEY DAVIDSON EC SLINGSHOT 17 FL MUFFLER"
+        "desc": "HARLEY EC SLINGSHOT 17 FL MUFFLER"
     },
     {
         "ratn": "E100004056",
-        "desc": "NA EC MARKETING 14 SHOW PRODUCT - board of directors and GLC"
+        "desc": "NA EC MARKETING 14 SHOW PRODUCT - board of directors + GLC"
     },
     {
         "ratn": "E100004057",
-        "desc": "MFA2 RC 19 MERCEDES GLA CLA and NISSAN"
+        "desc": "MFA2 RC 19 MERCEDES GLA CLA + NISSAN"
     },
     {
         "ratn": "E100004058",
@@ -3785,11 +3785,11 @@
     },
     {
         "ratn": "E100004068",
-        "desc": "CHRYSLER EC DS 13 3.6L"
+        "desc": "CHRY EC DS 13 3.6L"
     },
     {
         "ratn": "E100004069",
-        "desc": "CHRYSLER EC VF PROMASTER 14 Volume Increase"
+        "desc": "CHRY EC VF PROMASTER 14 Volume Increase"
     },
     {
         "ratn": "E100004070",
@@ -3861,11 +3861,11 @@
     },
     {
         "ratn": "E100004090",
-        "desc": "CHRYSLER EC KL 17 GMET4 Cold End"
+        "desc": "CHRY EC KL 17 GMET4 Cold End"
     },
     {
         "ratn": "E100004091",
-        "desc": "CHRYSLER EC MY18 HD DIESEL"
+        "desc": "CHRY EC MY18 HD DIESEL"
     },
     {
         "ratn": "E100004092",
@@ -3873,7 +3873,7 @@
     },
     {
         "ratn": "E100004093",
-        "desc": "CHRYSLER EC DT 17.5 RAM D TRUCK"
+        "desc": "CHRY EC DT 17.5 RAM D TRUCK"
     },
     {
         "ratn": "E100004095",
@@ -3881,11 +3881,11 @@
     },
     {
         "ratn": "E100004096",
-        "desc": "CVS EC 16 WEICHAI 9.7L Natural Gas"
+        "desc": "CVS EC 16 WEICHAI 9.7L Nat. Gas"
     },
     {
         "ratn": "E100004097",
-        "desc": "CHRYSLER EC DS LD RAM 15-16 LD RAM TRAPLINE"
+        "desc": "CHRY EC DS LD RAM 15-16 LD RAM TRAPLINE"
     },
     {
         "ratn": "E100004098",
@@ -3905,11 +3905,11 @@
     },
     {
         "ratn": "E100004103",
-        "desc": "NAOERP RC TEST General Six Sigma Support"
+        "desc": "NAOERP RC TEST General Six Sigma"
     },
     {
         "ratn": "E100004106",
-        "desc": "CHRYSLER EC KL UF 15 TRAPLINE 1396"
+        "desc": "CHRY EC KL UF 15 TRAPLINE 1396"
     },
     {
         "ratn": "E100004107",
@@ -3921,7 +3921,7 @@
     },
     {
         "ratn": "E100004110",
-        "desc": "NAOERP TEST GENERAL FIXTURING DEVELOPMENT"
+        "desc": "NAOERP TEST GENERAL FIXTURING Dev."
     },
     {
         "ratn": "E100004111",
@@ -3933,7 +3933,7 @@
     },
     {
         "ratn": "E100004113",
-        "desc": "FORD EC C519 18 C2 Next Generation Ford Focus"
+        "desc": "FORD EC C519 18 C2 Next Gen Ford Focus"
     },
     {
         "ratn": "E100004114",
@@ -3961,27 +3961,27 @@
     },
     {
         "ratn": "E100004121",
-        "desc": "ADV ENG EC WISCONSIN DERC Consortium Engine Combustion Research"
+        "desc": "ADV ENG EC DERC Consortium"
     },
     {
         "ratn": "E100004122",
-        "desc": "ADV ENG EC SWRI CONSORTIUM HEDGE"
+        "desc": "ADV ENG EC SWRI Consortium"
     },
     {
         "ratn": "E100004123",
-        "desc": "ADV ENG EC OSU CONSORTIUM CAR"
+        "desc": "ADV ENG EC OSU Consortium CAR"
     },
     {
         "ratn": "E100004124",
-        "desc": "ADV ENG EC SWRI CONSORTIUM ACCAT"
+        "desc": "ADV ENG EC SWRI Consortium ACCAT"
     },
     {
         "ratn": "E100004125",
-        "desc": "ADV ENG EC Light Tools Development Core Science"
+        "desc": "ADV ENG EC Light Tools Dev. Core Science"
     },
     {
         "ratn": "E100004126",
-        "desc": "ADV ENG EC Lightweight Exh Sys. Development Core Science"
+        "desc": "ADV ENG EC Lightweight Exh Sys. Dev. Core Science"
     },
     {
         "ratn": "E100004127",
@@ -4025,7 +4025,7 @@
     },
     {
         "ratn": "E100004138",
-        "desc": "CHRYSLER EC DJ D2 15 RAM HD Diesel Air Suspension Fix"
+        "desc": "CHRY EC DJ D2 15 RAM HD Diesel Air Suspension Fix"
     },
     {
         "ratn": "E100004156",
@@ -4033,7 +4033,7 @@
     },
     {
         "ratn": "E100004157",
-        "desc": "CHRYSLER EC KL 17 Flexpipe Changes"
+        "desc": "CHRY EC KL 17 Flexpipe Changes"
     },
     {
         "ratn": "E100004158",
@@ -4041,7 +4041,7 @@
     },
     {
         "ratn": "E100004159",
-        "desc": "CHRYSLER EC DODGE VIPER 15.75 ZD Santana Tips"
+        "desc": "CHRY EC DODGE VIPER 15.75 ZD Santana Tips"
     },
     {
         "ratn": "E100004160",
@@ -4065,7 +4065,7 @@
     },
     {
         "ratn": "E100004166",
-        "desc": "CHRYSLER EC DS 15 TRAPLINE 1419"
+        "desc": "CHRY EC DS 15 TRAPLINE 1419"
     },
     {
         "ratn": "E100004167",
@@ -4081,7 +4081,7 @@
     },
     {
         "ratn": "E100004171",
-        "desc": "CHRYSLER RC MP 16 JEEP RENEGADE"
+        "desc": "CHRY RC MP 16 JEEP RENEGADE"
     },
     {
         "ratn": "E100004172",
@@ -4089,11 +4089,11 @@
     },
     {
         "ratn": "E100004173",
-        "desc": "ADV ENG EC 18+ WOODWARD NG Engine Development"
+        "desc": "ADV ENG EC 18+ WOODWARD NG Engine Dev."
     },
     {
         "ratn": "E100004174",
-        "desc": "CHRYSLER EC HD RAM DIESEL 19 4.3L Full Exhaust System"
+        "desc": "CHRY EC HD RAM DIESEL 19 4.3L Full Exhaust System"
     },
     {
         "ratn": "E100004175",
@@ -4101,7 +4101,7 @@
     },
     {
         "ratn": "E100004176",
-        "desc": "CAT EC LRC Migration 15 LRC Migration of Substrates to Mufflers"
+        "desc": "CAT EC LRC Migration"
     },
     {
         "ratn": "E100004177",
@@ -4113,7 +4113,7 @@
     },
     {
         "ratn": "E100004179",
-        "desc": "ADV ENG EC OHIO UNIV. Core Science Electrochemical Consortium"
+        "desc": "ADV ENG EC OHIO UNIV. Consortium"
     },
     {
         "ratn": "E100004180",
@@ -4129,23 +4129,23 @@
     },
     {
         "ratn": "E100004183",
-        "desc": "ADV ENG EC EMISSIONS 15 Testing Setups"
+        "desc": "ADV ENG EC EMISSIONS 15 Testing"
     },
     {
         "ratn": "E100004184",
-        "desc": "CVS EC MDEG 18 Mexico Bus MD ATS Applications"
+        "desc": "CVS EC MDEG 18 Mexico Bus MD ATS Appl."
     },
     {
         "ratn": "E100004185",
-        "desc": "CVS EC MDEG 20 ATS MBBRAZIL Bus + Truck Applications"
+        "desc": "CVS EC MDEG 20 ATS MBBRAZIL Bus + Truck Appl."
     },
     {
         "ratn": "E100004186",
-        "desc": "CVS EC MDEG 18 ATS Stage V Off-Road Applications"
+        "desc": "CVS EC MDEG 18 ATS Stage V Off-Road Appl."
     },
     {
         "ratn": "E100004187",
-        "desc": "ADV EC H2 LNC DVP wRICARDO For H2 Enabled Aftertreatment System"
+        "desc": "ADV EC H2 LNC DVP"
     },
     {
         "ratn": "E100004188",
@@ -4153,11 +4153,11 @@
     },
     {
         "ratn": "E100004189",
-        "desc": "ADV ENG EC TAC-ETALIM ThermoAcoustic Conv Technology for WHR by Etalim Inc"
+        "desc": "ADV ENG EC TAC-ETALIM"
     },
     {
         "ratn": "E100004191",
-        "desc": "CHRYSLER RC JL 19 Jeep Wrangler"
+        "desc": "CHRY RC JL 19 Jeep Wrangler"
     },
     {
         "ratn": "E100004192",
@@ -4169,7 +4169,7 @@
     },
     {
         "ratn": "E100004195",
-        "desc": "CHRYSLER EC HD Gas MY15 Trapline 1442"
+        "desc": "CHRY EC HD Gas MY15 Trapline 1442"
     },
     {
         "ratn": "E100004196",
@@ -4217,7 +4217,7 @@
     },
     {
         "ratn": "E100004209",
-        "desc": "CHRYSLER EC JL WRANGLER 18 Cold End Exhaust"
+        "desc": "CHRY EC JL WRANGLER 18 Cold End Exhaust"
     },
     {
         "ratn": "E100004212",
@@ -4225,11 +4225,11 @@
     },
     {
         "ratn": "E100004215",
-        "desc": "BMW EC 35UP G2X 19 NA G2X- 3 and 4 SERIES Z4"
+        "desc": "BMW EC 35UP G2X 19 NA G2X- 3 + 4 SERIES Z4"
     },
     {
         "ratn": "E100004216",
-        "desc": "GM A2XX 18 NEXT GENERATION ALPHA"
+        "desc": "GM A2XX 18 NEXT Gen ALPHA"
     },
     {
         "ratn": "E100004217",
@@ -4261,7 +4261,7 @@
     },
     {
         "ratn": "E100004228",
-        "desc": "FCA EC GMET3 NA Compact Converter Development"
+        "desc": "FCA EC GMET3 NA Compact Converter Dev."
     },
     {
         "ratn": "E100004229",
@@ -4277,15 +4277,15 @@
     },
     {
         "ratn": "E100004233",
-        "desc": "CHRYSLER EL DT 18 LD Truck Bushing + Link Development"
+        "desc": "CHRY EL DT 18 LD Truck Bushing + Link Dev."
     },
     {
         "ratn": "E100004234",
-        "desc": "CHRYSLER EL DD DJ D2 DP NEXT GEN 19 HD Truck Bushing + Link Development"
+        "desc": "CHRY NEXT GEN 19 HD Truck Bushing + Link Dev."
     },
     {
         "ratn": "E100004235",
-        "desc": "CHRYSLER EL 17 JL WRANGLER Bushing Development"
+        "desc": "CHRY EL 17 JL WRANGLER Bushing Dev."
     },
     {
         "ratn": "E100004236",
@@ -4309,7 +4309,7 @@
     },
     {
         "ratn": "E100004241",
-        "desc": "NAOERP RC TESTING NVH Noise Model Development"
+        "desc": "NAOERP RC TESTING NVH Noise Model Dev."
     },
     {
         "ratn": "E100004242",
@@ -4321,7 +4321,7 @@
     },
     {
         "ratn": "E100004244",
-        "desc": "CATERPILLAR EC 17 LARGE ENGINE AFTERTREATMENT"
+        "desc": "CAT EC 17 LARGE ENGINE AFTERTREATMENT"
     },
     {
         "ratn": "E100004246",
@@ -4357,15 +4357,15 @@
     },
     {
         "ratn": "E100004255",
-        "desc": "NAOERP RC CORE ENG General Valving Development"
+        "desc": "NAOERP RC CORE ENG General Valving Dev."
     },
     {
         "ratn": "E100004256",
-        "desc": "CHRYSLER EC JL 18 WRANGLER Hot Ends"
+        "desc": "CHRY EC JL 18 WRANGLER Hot Ends"
     },
     {
         "ratn": "E100004258",
-        "desc": "LD HD EC 18 Thermal Management Research"
+        "desc": "LD HD EC 18 Thermal MGMT Research"
     },
     {
         "ratn": "E100004260",
@@ -4373,7 +4373,7 @@
     },
     {
         "ratn": "E100004261",
-        "desc": "CHRYSLER RC WS WN GRAND CHEROKEE CVRTD Development Vehicle"
+        "desc": "CHRY RC WS WN GR+ CHEROKEE CVRTD Dev. Vehicle"
     },
     {
         "ratn": "E100004262",
@@ -4385,11 +4385,11 @@
     },
     {
         "ratn": "E100004264",
-        "desc": "CHRYSLER EC JL Wrangler MY19 2.2L Diesel Aftertreatment"
+        "desc": "CHRY EC JL Wrangler MY19 2.2L Diesel Aftertreatment"
     },
     {
         "ratn": "E100004265",
-        "desc": "CHRYSLER EC JL Wrangler 19 3.0L Diesel Aftertreatment"
+        "desc": "CHRY EC JL Wrangler 19 3.0L Diesel Aftertreatment"
     },
     {
         "ratn": "E100004266",

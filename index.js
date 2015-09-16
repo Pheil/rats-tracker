@@ -403,6 +403,40 @@ pageMod.PageMod({
     }
 });
 
+pageMod.PageMod({
+    include: "http://pafoap01:8888/pls/prod/ece_web.ece_page?in_ece_no=ECE*",
+    contentScriptWhen: 'end',
+    contentScriptFile: './js/rats-ews.js',
+    onAttach: function(worker) {
+        worker.port.on("defhour", function() {  
+            var hour = preferences.defHour;
+            worker.port.emit("rtnhour", hour);
+        });
+
+        worker.port.on("add", function(ECE, hours) {            
+            var theDate = new Date(); //today
+
+            var doc = {
+              "_id": new Date().toJSON(),
+              "rats": "",
+              "ews": "",
+              "week": getWeekNumber(theDate),
+              "desc": "ECE" + ECE, 
+              "hours": hours
+            };
+            db.put(doc);
+                           
+            notifications.notify({
+                title: "RATS Tracker",
+                text: "ECE " + ECE + " [" + hours + " hours] added to RATS log.",
+                iconURL: ratIcon
+            });
+            updateBadge();
+        });
+        
+    }
+});
+
 let RATsLog = new RemotePages("about:ratslog");
 //var db = new PouchDB('RATS'); 
 
