@@ -47,7 +47,11 @@ var rats = new Bloodhound({
         return tokens;
     },
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  prefetch: './js/rats.json'
+  prefetch: {
+    url: './js/rats.json',
+    cache: true,
+    ttl: 604800000
+  }
 });
 
 $('#suggestions .typeahead').typeahead(null, {

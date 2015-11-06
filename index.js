@@ -2,7 +2,7 @@ var self = require('sdk/self');
 var notifications = require("sdk/notifications");
 var clipboard = require("sdk/clipboard");
 var preferences = require("sdk/simple-prefs").prefs;
-var { indexedDB, IDBKeyRange } = require('sdk/indexed-db');
+//var { indexedDB, IDBKeyRange } = require('sdk/indexed-db');
 var { ActionButton } = require("sdk/ui/button/action");
 const { ToggleButton } = require("sdk/ui/button/toggle");
 const pageMod = require("sdk/page-mod");
@@ -13,18 +13,36 @@ const sidebars = require("sdk/ui/sidebar");
 const {Cc,Ci,Cm,Cu,components} = require("chrome");
 const { defer } = require('sdk/core/promise');
 const { OS, TextEncoder, TextDecoder } = Cu.import("resource://gre/modules/osfile.jsm", {});
-
 var chrome = require('chrome');
 var prompts = chrome.Cc["@mozilla.org/embedcomp/prompt-service;1"].getService(chrome.Ci.nsIPromptService);
 Cu.import("resource://gre/modules/XPCOMUtils.jsm", this);
 Cu.import("resource://gre/modules/RemotePageManager.jsm");
 Cu.import("resource://gre/modules/Services.jsm", this);
 
-var PouchDB = require('./lib/pouchdb-4.0.0.js');
+var PouchDB = require('./lib/pouchdb-5.0.0.js');
 var db = new PouchDB('RATS');
 
-var ratIcon = self.data.url("./images/icon-32.png");
+var ratIcon = self.data.url("./images/icon-64.png");
 var cheeseIcon = self.data.url("./images/cheese-32.png");
+
+exports.main = function(options, callbacks) {
+    if (options.loadReason == "install") {
+        factory = new Factory(AboutRATS);
+        registerRemotePage();
+    } else if (options.loadReason == "startup") {
+        factory = new Factory(AboutRATS);
+        registerRemotePage();
+    } else if (options.loadReason == "upgrade") {
+        //factory = new Factory(AboutRATS);
+    }
+}
+
+exports.onUnload = function (reason) {
+    if (reason == "shutdown") {
+        factory.unregister();
+        RemotePageManager.removeRemotePageListener("about:ratslog");
+    }
+};
 
 var rats_button = ToggleButton({
   id: "rats-log",
@@ -217,31 +235,49 @@ function updateBadge() {
     });
 }
 
-// var quickRats = ActionButton({
-    // id: "quick-rats-button",
-    // label: "Quick Rats",
-    // icon: {
-      // "16": "./images/cheese-16.png",
-      // "32": "./images/cheese-32.png"
-    // },
-    // onClick: function(state) {
-        // rats_entry_panel.destroy();
-        // quickRats.destroy();
-    // }
-  // });
+function openAndReuseOneTabPerURL(url) {
+  var wm = Cc["@mozilla.org/appshell/window-mediator;1"]
+                     .getService(Ci.nsIWindowMediator);
+  var browserEnumerator = wm.getEnumerator("navigator:browser");
 
-// rats_entry_panel.show({
-  // position: quickRats
-// });
+  // Check each browser instance for our URL
+  var found = false;
+  while (!found && browserEnumerator.hasMoreElements()) {
+    var browserWin = browserEnumerator.getNext();
+    var tabbrowser = browserWin.gBrowser;
+
+    // Check each tab of this browser instance
+    var numTabs = tabbrowser.browsers.length;
+    for (var index = 0; index < numTabs; index++) {
+      var currentBrowser = tabbrowser.getBrowserAtIndex(index);
+      if (url == currentBrowser.currentURI.spec) {
+
+        // The URL is already opened. Select this tab.
+        tabbrowser.selectedTab = tabbrowser.tabContainer.childNodes[index];
+
+        // Focus *this* browser-window
+        browserWin.focus();
+
+        found = true;
+        break;
+      }
+    }
+  }
+
+  // Our URL isn't open. Open it now.
+  if (!found) {
+    tabs.open({
+        url: url,
+        isPinned: true,
+        inNewWindow: false,
+        inBackground: false
+    });
+  }
+}
 
 rat_panel.port.on("click_link", function (text) {
     if (text == "vLog") {
-        tabs.open({
-            url: "about:ratslog",
-            isPinned: true,
-            inNewWindow: false,
-            inBackground: false
-        });
+        openAndReuseOneTabPerURL("about:ratslog");
     }
     else if (text == "uLog") {
         man_add_panel.show({
@@ -272,6 +308,17 @@ rat_panel.port.on("click_link", function (text) {
             "Description",
             "Hours"
         );
+        
+        //Save DB file (TEST)
+        //var DBpath = dir + "\\ratsDB_log.txt";
+        //var ws = fs.createWriteStream('c:\output.txt');
+        //Write_data(DBpath, data);
+        //db.dump(ws).then(function (res) {
+          // res should be {ok: true}
+        //});
+        //END TEST
+        
+        
         db.allDocs(options, function (err, response) {
             if (response && response.rows.length > 0) {
               //Separate into variables
@@ -363,6 +410,98 @@ man_add_panel.port.on("man_add", function (ews, rats, desc, hours) {
 });
 
 pageMod.PageMod({
+    include: "about:ratslog",
+    contentScriptWhen: 'end',
+    contentScriptFile: './js/ratslog.js',
+    onAttach: function(worker) {
+        worker.port.on("RatsLog:ready", function() {  
+            var options = {include_docs: true};
+
+            db.allDocs(options, function (err, response) {
+
+            if (response && response.rows.length > 0) {
+              //Separate into variables
+                for (var i=0;i<response.rows.length;i++) {
+                    var rat_data = JSON.stringify(response.rows[i].doc);
+                    var rat_data_parsed = JSON.parse(rat_data);
+                    var num = i;
+                    var newText_1  = rat_data_parsed._id;
+                    var newText_2  = rat_data_parsed.rats;
+                    var newText_3  = rat_data_parsed.ews;
+                    var newText_4  = rat_data_parsed.week;
+                    var newText_5  = rat_data_parsed.desc;
+                    var newText_6  = rat_data_parsed.hours;
+                    
+                    var array = new Array(num, newText_1, newText_2, newText_3, newText_4, newText_5, newText_6);
+                    worker.port.emit("addRow", array);
+                }
+            }
+            // handle err or response
+            //console.error(err);
+          });
+        });  
+        worker.port.on("RatsLog:updateDesc", function(array) { 
+            var descArray = array;
+            var id = descArray[0];
+            var note = descArray[1];
+            
+            db.get(id).then(function (doc) {
+              // update description
+              doc.desc = note;
+              // put it back
+              return db.put(doc);
+            }).then(function () {
+              // fetch doc again
+              //return db.get(id);
+            }).then(function (doc) {
+              //console.log(doc);
+            });
+        }); 
+        worker.port.on("RatsLog:updateHour", function(array) { 
+            var hourArray = array;
+            var id = hourArray[0];
+            var hour = hourArray[1];
+              
+            db.get(id).then(function (doc) {
+              doc.hours = hour;
+              return db.put(doc);
+            });
+            updateBadge();
+        }); 
+        worker.port.on("RatsLog:updateRats", function(array) { 
+            var ratsArray = array;
+            var id = ratsArray[0];
+            var rat = ratsArray[1];
+              
+            db.get(id).then(function (doc) {
+              doc.rats = rat;
+              return db.put(doc);
+            });
+        }); 
+        worker.port.on("RatsLog:updateEWS", function(array) { 
+            var ewsArray = array;
+            var id = ewsArray[0];
+            var ews = ewsArray[1];
+              
+            db.get(id).then(function (doc) {
+              doc.ews = ews;
+              return db.put(doc);
+            });
+        }); 
+        worker.port.on("RatsLog:updateWeek", function(array) { 
+            var weekArray = array;
+            var id = weekArray[0];
+            var week = weekArray[1];
+              
+            db.get(id).then(function (doc) {
+              doc.week = week;
+              return db.put(doc);
+            });
+        });         
+    }
+});
+
+pageMod.PageMod({
     include: ["http://pafoap01:8888/pls/prod/ece_ewo_web.ece_ewo_page?in_ewr_no=EWS*", "http://pafoap01:8888/pls/prod/ece_ewo_web.ece_ewo_page?in_ewr_id=*"],
     contentScriptWhen: 'end',
     contentScriptFile: './js/rats-ews.js',
@@ -437,115 +576,23 @@ pageMod.PageMod({
     }
 });
 
-let RATsLog = new RemotePages("about:ratslog");
-//var db = new PouchDB('RATS'); 
+function registerRemotePage(){
+    let RATsLog = new RemotePages("about:ratslog");
+}
 
-//also works
-//RATsLog.addMessageListener("ready", () => {
-RATsLog.addMessageListener("ready", function() {
-    var options = {include_docs: true};
+Cm.QueryInterface(Ci.nsIComponentRegistrar);
 
-    db.allDocs(options, function (err, response) {
+// globals
+var factory;
+const aboutRATSLogDescription = 'About RATS Log';
+const aboutRATSLogUUID = '6a3897f0-3ba3-11e5-b970-0800200c9a66'; // make sure you generate a unique id from https://www.famkruithof.net/uuid/uuidgen
+const aboutPage_page = Services.io.newChannel('data:text/html,hi this is the page that is shown when navigate to about:myaboutpage', null, null)
 
-    if (response && response.rows.length > 0) {
-      //Separate into variables
-        for (var i=0;i<response.rows.length;i++) {
-            var rat_data = JSON.stringify(response.rows[i].doc);
-            var rat_data_parsed = JSON.parse(rat_data);
-            var num = i;
-            var newText_1  = rat_data_parsed._id;
-            var newText_2  = rat_data_parsed.rats;
-            var newText_3  = rat_data_parsed.ews;
-            var newText_4  = rat_data_parsed.week;
-            var newText_5  = rat_data_parsed.desc;
-            var newText_6  = rat_data_parsed.hours;
-            
-            var array = new Array(num, newText_1, newText_2, newText_3, newText_4, newText_5, newText_6);
-            RATsLog.sendAsyncMessage("addRow", array);
-        }
-    }
-    // handle err or response
-    //console.error(err);
-  });
-});
-
-RATsLog.addMessageListener("updateDesc", function(array) {
-    var descArray = array.data;
-    var id = descArray[0];
-    var note = descArray[1];
-    
-    db.get(id).then(function (doc) {
-      // update description
-      doc.desc = note;
-      // put it back
-      return db.put(doc);
-    }).then(function () {
-      // fetch doc again
-      //return db.get(id);
-    }).then(function (doc) {
-      //console.log(doc);
-    });
-});
-
-RATsLog.addMessageListener("updateHour", function(array) {
-    var hourArray = array.data;
-    var id = hourArray[0];
-    var hour = hourArray[1];
-      
-    db.get(id).then(function (doc) {
-      doc.hours = hour;
-      return db.put(doc);
-    });
-});
-
-RATsLog.addMessageListener("updateRats", function(array) {
-    var ratsArray = array.data;
-    var id = ratsArray[0];
-    var rat = ratsArray[1];
-      
-    db.get(id).then(function (doc) {
-      doc.rats = rat;
-      return db.put(doc);
-    });
-});
-
-RATsLog.addMessageListener("updateEWS", function(array) {
-    var ewsArray = array.data;
-    var id = ewsArray[0];
-    var ews = ewsArray[1];
-      
-    db.get(id).then(function (doc) {
-      doc.ews = ews;
-      return db.put(doc);
-    });
-});
-
-RATsLog.addMessageListener("updateWeek", function(array) {
-    var weekArray = array.data;
-    var id = weekArray[0];
-    var week = weekArray[1];
-      
-    db.get(id).then(function (doc) {
-      doc.week = week;
-      return db.put(doc);
-    });
-});
-
-const aboutRATSLogContract = "@mozilla.org/network/protocol/about;1?what=ratslog";
-const aboutRATSLogDescription = "About RATS Log";
-const aboutRATSLogUUID = components.ID("6a3897f0-3ba3-11e5-b970-0800200c9a66");
-// about:ratslog factory
-let aboutRATSLogFactory = {
-    createInstance: function(outer, iid) {
-        if (outer !== null)
-            throw Cr.NS_ERROR_NO_AGGREGATION;
-
-        return aboutRATSLog.QueryInterface(iid);
-    }
-};
-
-// about:ratslog
-let aboutRATSLog = {
+function AboutRATS() {}
+AboutRATS.prototype = Object.freeze({
+    classDescription: aboutRATSLogDescription,
+    contractID: '@mozilla.org/network/protocol/about;1?what=ratslog',
+    classID: components.ID('{' + aboutRATSLogUUID + '}'),
     QueryInterface: XPCOMUtils.generateQI([Ci.nsIAboutModule]),
 
     getURIFlags: function(aURI) {
@@ -559,6 +606,21 @@ let aboutRATSLog = {
         let uri = Services.io.newURI("resource://RatsTracker-at-tenneco-dot-com/data/ratslog.html", null, null);
         return Services.io.newChannelFromURI(uri);
     }
-};
-Cm.QueryInterface(Ci.nsIComponentRegistrar).
-registerFactory(aboutRATSLogUUID, aboutRATSLogDescription, aboutRATSLogContract, aboutRATSLogFactory);
+});
+
+function Factory(component) {
+    this.createInstance = function(outer, iid) {
+        if (outer) {
+            throw Cr.NS_ERROR_NO_AGGREGATION;
+        }
+        return new component();
+    };
+    this.register = function() {
+        Cm.registerFactory(component.prototype.classID, component.prototype.classDescription, component.prototype.contractID, this);
+    };
+    this.unregister = function() {
+        Cm.unregisterFactory(component.prototype.classID, this);
+    }
+    Object.freeze(this);
+    this.register();
+}

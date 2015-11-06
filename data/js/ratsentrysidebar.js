@@ -80,7 +80,7 @@ addon.port.on("update", function(array) {
     var row = stringArray[0];
     var rats = stringArray[1];
     if (rats == ""){
-        rats = "-"   
+        rats = "-"; 
     }
     var ews = stringArray[2];
     var week = stringArray[3];
@@ -116,8 +116,9 @@ addon.port.on("update", function(array) {
     //to do:  change week to "m" if combining different weeks
     //don't add two with N/A
     var exists = false;
+    var upRow;
     if (ews != "N/A") {
-        var upRow;
+        //var upRow;
         var rows = table.getElementsByTagName('tr').length;
         //for (var curRow=rows; curRow >= 0; curRow--) {
         for (i = 0; i < rows; i++) {

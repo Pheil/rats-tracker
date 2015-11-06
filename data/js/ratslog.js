@@ -148,23 +148,23 @@ function closeInput() {
     if (td.id == "D") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
-        sendAsyncMessage("updateDesc", updateArray);
+        self.port.emit("RatsLog:updateDesc", updateArray);
     } else if (td.id == "H") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
-        sendAsyncMessage("updateHour", updateArray);
+        self.port.emit("RatsLog:updateHour", updateArray);
     } else if (td.id == "R") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
-        sendAsyncMessage("updateRats", updateArray);
+        self.port.emit("RatsLog:updateRats", updateArray);
     } else if (td.id == "E") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
-        sendAsyncMessage("updateEWS", updateArray);
+        self.port.emit("RatsLog:updateEWS", updateArray);
     } else if (td.id == "W") {
         var id = td.parentNode.id;
         var updateArray = new Array(id, value);
-        sendAsyncMessage("updateWeek", updateArray);
+        self.port.emit("RatsLog:updateWeek", updateArray);
     }
     
 }
@@ -187,11 +187,9 @@ function addInput() {
       input.addEventListener('blur', closeInput);
     }); 
 }
-
-sendAsyncMessage("ready");
-addMessageListener("addRow", function(result) {
-
-    var stringArray = result.data;
+self.port.emit("RatsLog:ready");
+self.port.on("addRow", function(result) {
+    var stringArray = result;
     var row = stringArray[0];
     var id = stringArray[1];
     var rats = stringArray[2];

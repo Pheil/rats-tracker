@@ -36,9 +36,6 @@
 th.tg-sort-header::-moz-selection {
     background: transparent;
 }
-th.tg-sort-header::selection {
-    background: transparent;
-}
 th.tg-sort-header {
     cursor: pointer;
 }
