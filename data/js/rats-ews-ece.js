@@ -26,14 +26,13 @@
     document.body.appendChild(div);
     
     var URLlocation = window.location.href;
-    var numLen = URLlocation.length-5;
-    var EWS = URLlocation.substr(numLen);
+    var EWSECE = URLlocation.split('=')[1];
        
     //Add button action
     var add = document.getElementById("add");
     add.addEventListener("click", function() {
         var hours = document.getElementById("hours").value;
-        self.port.emit("add", EWS, hours);
+        self.port.emit("add", EWSECE, hours);
     }, false);  
     
     //Hour input

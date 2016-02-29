@@ -19,7 +19,7 @@ Cu.import("resource://gre/modules/XPCOMUtils.jsm", this);
 Cu.import("resource://gre/modules/RemotePageManager.jsm");
 Cu.import("resource://gre/modules/Services.jsm", this);
 
-var PouchDB = require('./lib/pouchdb-5.0.0.js');
+var PouchDB = require('./lib/pouchdb-5.2.1.js');
 var db = new PouchDB('RATS');
 
 var ratIcon = self.data.url("./images/icon-64.png");
@@ -78,7 +78,7 @@ var man_add_panel = panels.Panel({
     height: 245,
     contentURL: "./add_panel.html",
     onHide: handleHide2,
-    contentScriptFile: ["./js/jquery-2.1.4.js",
+    contentScriptFile: ["./js/jquery-2.2.1.min.js",
                       "resource://RatsTracker-at-tenneco-dot-com/lib/typeahead.bundle.js",
                       "./js/addpanel.js"] 
 });
@@ -209,7 +209,7 @@ function updateBadge() {
     var theDate = new Date();
     var theDate2 = theDate.toJSON();
     var week = getWeekNumber(theDate);
-    
+
     //Return start of the week
     var startDate = new Date(theDate.getFullYear(),theDate.getMonth(),theDate.getDate() - (theDate.getDay() + 1)).toJSON();
 
@@ -228,9 +228,18 @@ function updateBadge() {
             }
         }
         //Update badge
+        var startDate2 = new Date(startDate);
+        var timeDiff = Math.abs(theDate.getTime() - startDate2.getTime());
+        var diffHours = Math.ceil(timeDiff / 3.6e6)-56; //-56 to get 7 am since start date is Sat
         rats_button.badge = weeklyHours;
-        rats_button.badgeColor = "#AA00AA";
-        
+        if (diffHours - weeklyHours <= 1) {
+            rats_button.badgeColor = "#009900";
+        } else if (diffHours - weeklyHours < 8 && diffHours - weeklyHours > 1) {
+            rats_button.badgeColor = "#b2b200";
+        } else {
+            rats_button.badgeColor = "#ff0000";
+        }
+
       // handle err or response
     });
 }
@@ -318,7 +327,6 @@ rat_panel.port.on("click_link", function (text) {
         //});
         //END TEST
         
-        
         db.allDocs(options, function (err, response) {
             if (response && response.rows.length > 0) {
               //Separate into variables
@@ -339,7 +347,7 @@ rat_panel.port.on("click_link", function (text) {
                         r_desc,
                         r_hours+"\r\n"
                     );
-                console.log(rats_array);
+                //console.log(rats_array);
                 }
             Write_data(path, rats_array);
             handleHide();
@@ -504,7 +512,7 @@ pageMod.PageMod({
 pageMod.PageMod({
     include: ["http://pafoap01:8888/pls/prod/ece_ewo_web.ece_ewo_page?in_ewr_no=EWS*", "http://pafoap01:8888/pls/prod/ece_ewo_web.ece_ewo_page?in_ewr_id=*"],
     contentScriptWhen: 'end',
-    contentScriptFile: './js/rats-ews.js',
+    contentScriptFile: './js/rats-ews-ece.js',
     onAttach: function(worker) {
         worker.port.on("defhour", function() {  
             var hour = preferences.defHour;
@@ -530,10 +538,15 @@ pageMod.PageMod({
             //db.get(doc._id).then(function(doc) {
             //    console.error(doc);
             //});
-               
+            var hourstxt;
+            if (hours > 1) {
+                hourstxt = "hours";
+            } else {
+                hourstxt = "hour";
+            }
             notifications.notify({
                 title: "RATS Tracker",
-                text: "EWS " + EWS + " [" + hours + " hours] added to RATS log.",
+                text: EWS + " [" + hours + " " + hourstxt + "] added to RATS log.",
                 iconURL: ratIcon
             });
             updateBadge();
@@ -545,7 +558,7 @@ pageMod.PageMod({
 pageMod.PageMod({
     include: "http://pafoap01:8888/pls/prod/ece_web.ece_page?in_ece_no=ECE*",
     contentScriptWhen: 'end',
-    contentScriptFile: './js/rats-ews.js',
+    contentScriptFile: './js/rats-ews-ece.js',
     onAttach: function(worker) {
         worker.port.on("defhour", function() {  
             var hour = preferences.defHour;
@@ -560,14 +573,20 @@ pageMod.PageMod({
               "rats": "",
               "ews": "",
               "week": getWeekNumber(theDate),
-              "desc": "ECE" + ECE, 
+              "desc": ECE, 
               "hours": hours
             };
             db.put(doc);
                            
+            var hourstxt;
+            if (hours > 1) {
+                hourstxt = "hours";
+            } else {
+                hourstxt = "hour";
+            }
             notifications.notify({
                 title: "RATS Tracker",
-                text: "ECE " + ECE + " [" + hours + " hours] added to RATS log.",
+                text: EWS + " [" + hours + " " + hourstxt + "] added to RATS log.",
                 iconURL: ratIcon
             });
             updateBadge();
