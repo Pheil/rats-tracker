@@ -2,7 +2,7 @@
   "title": "RATS Tracker",
   "id": "RatsTracker@tenneco.com",
   "name": "rats-tracker",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "homepage": "http://tamilan.na.ten/cae/",
   "description": "RATS log assistant",
   "main": "index.js",

@@ -230,7 +230,7 @@ function updateBadge() {
         //Update badge
         var startDate2 = new Date(startDate);
         var timeDiff = Math.abs(theDate.getTime() - startDate2.getTime());
-        var diffHours = Math.ceil(timeDiff / 3.6e6)-56; //-56 to get 7 am since start date is Sat
+        var diffHours = (Math.ceil(timeDiff / 3.6e6)-48)*0.3333; //-48 to get mon, *.333 to get 8 hours per day (start date is Sat)
         rats_button.badge = weeklyHours;
         if (diffHours - weeklyHours <= 1) {
             rats_button.badgeColor = "#009900";
@@ -519,7 +519,12 @@ pageMod.PageMod({
             worker.port.emit("rtnhour", hour);
         });
 
-        worker.port.on("add", function(EWS, hours) {            
+        worker.port.on("add", function(EWS, hours) {
+            //If EWS remove 'EWS'
+            var n = EWS.indexOf("EWS"); 
+            if (n > -1){
+                EWS = EWS.substr(3, 7);
+            }
             var theDate = new Date(); //today
 
             // Old ID  "_id": "RAT:" + new Date().toJSON(),
@@ -586,7 +591,7 @@ pageMod.PageMod({
             }
             notifications.notify({
                 title: "RATS Tracker",
-                text: EWS + " [" + hours + " " + hourstxt + "] added to RATS log.",
+                text: ECE + " [" + hours + " " + hourstxt + "] added to RATS log.",
                 iconURL: ratIcon
             });
             updateBadge();
